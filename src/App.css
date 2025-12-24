@@ -1,0 +1,14 @@
+/* Custom styles for AAIS - All styles should use design system tokens */
+
+.logo-animation {
+  transition: filter 300ms ease-in-out;
+}
+
+.logo-animation:hover {
+  filter: drop-shadow(0 0 1em hsl(var(--accent) / 0.4));
+}
+
+/* Smooth transitions for interactive elements */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

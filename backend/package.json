@@ -1,0 +1,28 @@
+{
+  "name": "aais-email-service",
+  "version": "1.0.0",
+  "description": "Email service for AAIS contact forms",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node init-env.js && nodemon server.js",
+    "init": "node init-env.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "email",
+    "nodemailer",
+    "express"
+  ],
+  "author": "AAIS",
+  "license": "MIT"
+}

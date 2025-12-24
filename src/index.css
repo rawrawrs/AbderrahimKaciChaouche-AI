@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 184 100% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 184 100% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 184 100% 18%;
+
+    --primary: 184 100% 18%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 174 44% 51%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 184 60% 35%;
+
+    --accent: 174 44% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 174 44% 51%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 184 100% 18%;
+    --sidebar-primary: 184 100% 18%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 184 100% 18%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 174 44% 51%;
+
+    /* AAIS Brand Colors */
+    --brand-primary: 184 100% 18%; /* #264653 */
+    --brand-accent: 174 44% 51%; /* #2a9d8f */
+  }
+
+  .dark {
+    --background: 184 100% 18%;
+    --foreground: 0 0% 98%;
+
+    --card: 184 100% 18%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 184 100% 18%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 184 100% 18%;
+
+    --secondary: 174 44% 51%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 174 44% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 174 44% 51%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 174 44% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 174 44% 51%;
+  }
+}
+
+/* Prevent drag and drop shadow clone for images and GIFs */
+/* Prevent image selection (blue highlight) and dragging */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  
+  /* Prevent the ghost image during drag */
+  pointer-events: none;
+  
+  /* Prevent text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  /* Prevent tap highlighting on mobile */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Additional measures to prevent drag ghost */
+img::before,
+img::after {
+  display: none !important;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@keyframes dropdown-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
