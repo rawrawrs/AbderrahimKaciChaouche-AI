@@ -36,9 +36,6 @@
     Referrer-Policy = "same-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-[[plugins]]
-  package = "@netlify/plugin-forms"
-
 [template]
   [template.contact]
     subject = "New contact form submission from Abderrahim Kaci Chaouche website"
