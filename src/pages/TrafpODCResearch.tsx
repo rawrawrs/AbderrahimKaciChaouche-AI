@@ -2,10 +2,20 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import MegaFooter from "@/components/MegaFooter";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const TrafpODCResearch = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Trafp-ODC Research by Abderrahim Kaci Chaouche - Training-Free Object Detection"
+        description="Training-Free Pipeline for Object Detection and Classification by Abderrahim Kaci Chaouche. Revolutionary approach to recognize objects without training complex AI models, using intelligent image analysis and structural understanding."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/research/trafpodc' }]}
+        keywords="Trafp-ODC, training-free object detection, object classification, AI object recognition, image analysis, computer vision, Algeria AI research, advanced object detection, zero-shot learning, visual understanding"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="pt-6">
         {/* Main Content */}

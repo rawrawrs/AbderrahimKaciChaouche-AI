@@ -3,6 +3,7 @@ import deepResearchImage from "@/assets/AAIScutomdeepresearchVIZ.png";
 import { Link } from "react-router-dom";
 import MegaFooter from "@/components/MegaFooter";
 import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 const FrenchCustomDeepResearch = () => {
   useEffect(() => {
@@ -12,6 +13,15 @@ const FrenchCustomDeepResearch = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO
+        title="Recherche Approfondie Sur Mesure par Abderrahim Kaci Chaouche - Développement IA Avancé"
+        description="Systèmes de recherche approfondie sur mesure par Abderrahim Kaci Chaouche qui vont au-delà de la recherche ou de l'analyse traditionnelle. Combinaison de raisonnement intelligent, de compréhension contextuelle et d'apprentissage adaptatif pour explorer des données complexes, découvrir des modèles et fournir des informations personnalisées."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/solutions/customdeepresearch' }]}
+        keywords="recherche approfondie sur mesure, recherche IA, analyse de données, reconnaissance de motifs, raisonnement intelligent, compréhension contextuelle, apprentissage adaptatif, Abderrahim Kaci Chaouche"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <main className="flex-grow">
         <div className="container mx-auto px-2 sm:px-6 py-16">
@@ -47,10 +57,11 @@ const FrenchCustomDeepResearch = () => {
             
             {/* Image centered */}
             <div className="flex justify-center px-0 sm:px-8">
-              <img 
-                src={deepResearchImage} 
-                alt="Visualisation de la recherche approfondie sur mesure AAIS" 
+              <img
+                src={deepResearchImage}
+                alt="Visualisation du système de recherche approfondie sur mesure montrant l'IA analysant des données complexes et découvrant des modèles"
                 className="w-[100%] sm:max-w-4xl h-auto"
+                loading="lazy"
               />
             </div>
           </div>

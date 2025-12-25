@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import deepResearchImage from "@/assets/AAIScutomdeepresearchVIZ.png";
 import MegaFooter from "@/components/MegaFooter";
 import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 const FrenchDeepResearch = () => {
   useEffect(() => {
@@ -11,6 +12,15 @@ const FrenchDeepResearch = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Recherche Approfondie par Abderrahim Kaci Chaouche - Développement IA Avancé"
+        description="Développement de systèmes de recherche approfondie par Abderrahim Kaci Chaouche, chercheur et développeur en IA. Solutions de recherche approfondie sur mesure combinant raisonnement intelligent, compréhension contextuelle et apprentissage adaptatif."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/solutions/deepresearch' }]}
+        keywords="recherche approfondie, développement IA, intelligence artificielle, apprentissage automatique, raisonnement intelligent, compréhension contextuelle, apprentissage adaptatif, Abderrahim Kaci Chaouche"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
         <div className="container mx-auto px-2 sm:px-6 py-16">
           {/* Title and content container */}
@@ -43,10 +53,11 @@ const FrenchDeepResearch = () => {
             
             {/* Image centered */}
             <div className="flex justify-center px-0 sm:px-8">
-              <img 
-                src={deepResearchImage} 
-                alt="Visualisation de la recherche approfondie sur mesure AAIS" 
+              <img
+                src={deepResearchImage}
+                alt="Visualisation du système de recherche approfondie sur mesure montrant l'IA analysant des données complexes et découvrant des modèles"
                 className="w-[100%] sm:max-w-4xl h-auto"
+                loading="lazy"
               />
             </div>
           </div>

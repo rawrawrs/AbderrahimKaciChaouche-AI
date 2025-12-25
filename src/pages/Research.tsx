@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import MegaFooter from "@/components/MegaFooter";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const Research = () => {
   useEffect(() => {
@@ -11,6 +12,38 @@ const Research = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="AI Research by Abderrahim Kaci Chaouche - Pushing the Boundaries of AI"
+        description="Explore the cutting-edge AI research by Abderrahim Kaci Chaouche, including the revolutionary Syntron Architecture and the training-free Trafp-ODC object detection pipeline. Advanced research in neural architectures and object detection systems."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/research' }]}
+        keywords="AI research, applied AI research, Syntron Architecture, Trafp-ODC, neural architectures, object detection, artificial intelligence research, machine learning research, Algeria AI research, innovative AI systems"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
+      {/* Structured content for featured snippets */}
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "AI Research by Abderrahim Kaci Chaouche - Pushing the Boundaries of AI",
+            "author": {
+              "@type": "Person",
+              "name": "Abderrahim Kaci Chaouche"
+            },
+            "datePublished": "2025-08-23",
+            "dateModified": "2025-08-23",
+            "publisher": {
+              "@type": "Person",
+              "name": "Abderrahim Kaci Chaouche"
+            },
+            "description": "Explore the cutting-edge AI research by Abderrahim Kaci Chaouche, including the revolutionary Syntron Architecture and the training-free Trafp-ODC object detection pipeline.",
+            "articleSection": "Artificial Intelligence Research",
+            "keywords": "AI research, Syntron Architecture, Trafp-ODC, neural architectures, object detection"
+          }
+        `}
+      </script>
       <Navigation />
       <div className="container mx-auto px-6 py-16">
         {/* Title and Description Section */}

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import fifthSectionVideo from "@/assets/FifthSectionVid.mp4";
+import { SEO } from "@/components/SEO";
 
 const FrenchContactUs = () => {
   const [formData, setFormData] = useState({
@@ -126,6 +127,15 @@ const FrenchContactUs = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Contact - Commencez Votre Parcours IA avec Abderrahim Kaci Chaouche"
+        description="Contactez Abderrahim Kaci Chaouche pour discuter de votre projet, poser des questions ou demander une démo. Connectez-vous avec le chercheur et développeur IA leader en Algérie pour des solutions avancées en architectures neuronales, détection d'objets et plus encore."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/contact' }]}
+        keywords="contact Abderrahim Kaci Chaouche, contact chercheur IA Algérie, expert IA Algérie, contact développement IA, Architecture Syntron, Trafp-ODC, architectures neuronales, détection d'objets, expert machine learning, recherche IA Algérie"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="py-12 lg:py-20">
         <div className="container mx-auto px-6">

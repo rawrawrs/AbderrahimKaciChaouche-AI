@@ -3,6 +3,7 @@ import aaisFileProcessingImage from "@/assets/AAIScustomfileprocessingVIZ.png";
 import { Link } from "react-router-dom";
 import MegaFooter from "@/components/MegaFooter";
 import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 const FrenchFileProcessing = () => {
   useEffect(() => {
@@ -12,6 +13,15 @@ const FrenchFileProcessing = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Traitement de Fichiers par Abderrahim Kaci Chaouche - Développement IA Avancé"
+        description="Développement de systèmes de traitement de données et de fichiers par Abderrahim Kaci Chaouche, chercheur et développeur en IA. Transformation des données brutes et des fichiers en résultats intelligents clairs."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/solutions/fileprocessing' }]}
+        keywords="traitement de fichiers, traitement de données, développement IA, intelligence artificielle, apprentissage automatique, transformation de données, résultats intelligents, Abderrahim Kaci Chaouche"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="container mx-auto px-2 sm:px-6 py-16">
         {/* Title */}
@@ -46,10 +56,11 @@ const FrenchFileProcessing = () => {
           
           {/* Image centered */}
           <div className="flex justify-center px-0 sm:px-8">
-            <img 
-              src={aaisFileProcessingImage} 
-              alt="Visualisation du traitement de fichiers AAIS" 
+            <img
+              src={aaisFileProcessingImage}
+              alt="Visualisation du système de traitement de données et de fichiers montrant l'IA transformant les données brutes en intelligence exploitable"
               className="w-[100%] sm:max-w-4xl h-auto"
+              loading="lazy"
             />
           </div>
           

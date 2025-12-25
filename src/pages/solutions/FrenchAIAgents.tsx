@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MegaFooter from "@/components/MegaFooter";
 import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 const FrenchAIAgents = () => {
   useEffect(() => {
@@ -14,6 +15,15 @@ const FrenchAIAgents = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Agents IA par Abderrahim Kaci Chaouche - Développement IA Avancé"
+        description="Développement d'agents IA par Abderrahim Kaci Chaouche, chercheur et développeur en IA. Agents IA sur mesure pour des besoins spécifiques, développés avec précision, fiabilité et intention."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/solutions/aiagents' }]}
+        keywords="développement IA, intelligence artificielle, apprentissage automatique, IA Algérie, agents IA sur mesure, chercheur IA, développement IA, Abderrahim Kaci Chaouche, automatisation intelligente"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="container mx-auto px-2 sm:px-6 py-16">
         {/* Title */}
@@ -48,10 +58,11 @@ const FrenchAIAgents = () => {
           
           {/* Image centered */}
           <div className="flex justify-center px-0 sm:px-8">
-            <img 
-              src={aaisAIAgentsImage} 
-              alt="Visualisation des agents IA AAIS" 
+            <img
+              src={aaisAIAgentsImage}
+              alt="Visualisation des agents IA personnalisés montrant l'automatisation intelligente pour les processus métier"
               className="w-[100%] sm:max-w-4xl h-auto"
+              loading="lazy"
             />
           </div>
           
@@ -87,10 +98,11 @@ const FrenchAIAgents = () => {
             
             {/* Image */}
             <div className="md:w-1/2 flex justify-start pl-4 md:pl-8">
-              <img 
-                src={aaisAgentCustomImage} 
-                alt="Visualisation personnalisée des agents AAIS" 
+              <img
+                src={aaisAgentCustomImage}
+                alt="Agent IA personnalisé adapté aux besoins et processus spécifiques de l'entreprise"
                 className="max-w-[90%] md:max-w-full h-auto"
+                loading="lazy"
               />
             </div>
           </div>

@@ -4,6 +4,7 @@ import MegaFooter from "@/components/MegaFooter";
 import { Link } from "react-router-dom";
 import { BlockMath, InlineMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
+import { SEO } from "@/components/SEO";
 
 // Reusable ExpandableImage component
 const ExpandableImage = ({ src, alt, className = '' }) => {
@@ -59,6 +60,15 @@ const ExpandableImage = ({ src, alt, className = '' }) => {
 const FrenchSyntronResearch = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Recherche Architecture Syntron par Abderrahim Kaci Chaouche"
+        description="Départ révolutionnaire des architectures neuronales traditionnelles basées sur les poids. Les Syntrons transforment l'IA en espaces de possibilités dynamiques, permettant une pensée émergente, un raisonnement contrefactuel et une intelligence auto-organisée. Recherche avancée en IA par Abderrahim Kaci Chaouche."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/research/syntron' }]}
+        keywords="architecture Syntron, recherche en architecture neuronale, systèmes IA dynamiques, intelligence émergente, raisonnement contrefactuel, IA auto-organisée, réseaux neuronaux basés sur les poids, recherche IA Algérie, architectures neuronales avancées, intelligence artificielle générale"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="pt-6">
         <main className="min-h-screen flex items-center justify-center px-6 md:px-8 py-20">

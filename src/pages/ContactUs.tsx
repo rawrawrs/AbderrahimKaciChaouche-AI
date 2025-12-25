@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import fifthSectionVideo from "@/assets/FifthSectionVid.mp4";
 import { useLocation } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -26,17 +27,12 @@ const ContactUs = () => {
   const currentLanguage = location.pathname.startsWith('/fr') ? 'fr' : 'en';
 
   useEffect(() => {
-    // Scroll to top when component mounts
-    window.scrollTo(0, 0);
-    
     const video = videoRef.current;
     if (video) {
-      // Optimize video playback
       video.muted = true;
       video.playsInline = true;
       video.preload = "metadata";
       
-      // Handle video loading more gracefully
       const handleCanPlay = () => {
         if (video.paused) {
           video.play().catch(e => console.log("Autoplay prevented:", e));
@@ -45,7 +41,6 @@ const ContactUs = () => {
       
       video.addEventListener('canplay', handleCanPlay);
       
-      // Attempt to play the video
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch(error => {
@@ -70,13 +65,10 @@ const ContactUs = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate form
     if (!formData.name || !formData.email || !formData.role || !formData.company || !formData.details) {
       setSubmitMessage({
         type: "error",
-        text: currentLanguage === 'fr' 
-          ? "Veuillez remplir tous les champs obligatoires." 
-          : "Please fill in all required fields."
+        text: "Please fill in all required fields."
       });
       return;
     }
@@ -103,42 +95,35 @@ const ContactUs = () => {
           type: "success",
           text: result.message
         });
-        // Reset form
-        setFormData({
-          name: "",
-          email: "",
-          role: "",
-          phone: "",
-          company: "",
-          details: ""
-        });
+        setFormData({ name: "", email: "", role: "", phone: "", company: "", details: "" });
       } else {
         setSubmitMessage({
           type: "error",
-          text: result.message || (currentLanguage === 'fr' 
-            ? "Une erreur est survenue lors de l'envoi de votre message." 
-            : "An error occurred while sending your message.")
+          text: result.message || "An error occurred while sending your message."
         });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitMessage({
         type: "error",
-        text: currentLanguage === 'fr' 
-          ? "Impossible de se connecter au serveur. Veuillez réessayer plus tard." 
-          : "Unable to connect to server. Please try again later."
+        text: "Unable to connect to server. Please try again later."
       });
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleContactButtonClick = () => {
-    window.location.href = currentLanguage === 'fr' ? '/fr/contact' : '/en/contact';
-  };
-
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Contact - Start Your AI Journey with Abderrahim Kaci Chaouche"
+        description="Get in touch with Abderrahim Kaci Chaouche to discuss your project, ask questions, or request a demo. Connect with Algeria's leading AI researcher and developer for advanced solutions in neural architectures, object detection, and more."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/contact' }]}
+        keywords="contact Abderrahim Kaci Chaouche, AI researcher contact, Algeria AI expert, AI development contact, Syntron Architecture, Trafp-ODC, neural architectures, object detection, machine learning expert, AI research Algeria"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="py-12 lg:py-20">
         <div className="container mx-auto px-6">
@@ -148,15 +133,13 @@ const ContactUs = () => {
                 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-6"
                 style={{ color: '#264653' }}
               >
-                {currentLanguage === 'fr' ? "Contactez Abderrahim" : "Get in touch with Abderrahim"}
+                Get in touch with Abderrahim
               </h1>
               <p 
                 className="text-lg md:text-xl"
                 style={{ color: '#264653' }}
               >
-                {currentLanguage === 'fr'
-                  ? "Commencez votre parcours IA avec Abderrahim"
-                  : "Start your AI journey with Abderrahim"}
+                Start your AI journey with Abderrahim
               </p>
             </div>
 
@@ -179,15 +162,13 @@ const ContactUs = () => {
                       className="text-2xl font-normal mb-4"
                       style={{ color: '#264653' }}
                     >
-                      {currentLanguage === 'fr' ? "Contactez-nous" : "Get in Touch"}
+                      Get in Touch
                     </h2>
                     <p 
                       className="text-base md:text-lg mb-6"
                       style={{ color: '#264653' }}
                     >
-                      {currentLanguage === 'fr'
-                        ? "Je suis ici pour vous aider à exploiter la puissance de l'IA pour votre entreprise. Que vous recherchiez une démonstration, ayez des questions sur mes solutions ou souhaitiez discuter d'un projet personnalisé, j'aimerais beaucoup vous entendre."
-                        : "I am  here to help you harness the power of AI for your business. Whether you're looking for a demo, have questions about my solutions, or want to discuss a custom project, I'd love to hear from you."}
+                      I am here to help you harness the power of AI for your business. Whether you're looking for a demo, have questions about my solutions, or want to discuss a custom project, I'd love to hear from you.
                     </p>
                   </div>
 
@@ -197,7 +178,7 @@ const ContactUs = () => {
                         className="text-xl font-normal mb-2"
                         style={{ color: '#264653' }}
                       >
-                        {currentLanguage === 'fr' ? "Email" : "Email"}
+                        Email
                       </h3>
                       <p 
                         className="text-lg"
@@ -212,15 +193,13 @@ const ContactUs = () => {
                         className="text-xl font-normal mb-2"
                         style={{ color: '#264653' }}
                       >
-                        {currentLanguage === 'fr' ? "Presse & Événements" : "Press & Events"}
+                        Press & Events
                       </h3>
                       <p 
                         className="text-base md:text-lg"
                         style={{ color: '#264653' }}
                       >
-                        {currentLanguage === 'fr'
-                          ? "Pour les demandes de presse, les interviews et les collaborations événementielles, veuillez nous contacter via cette section. Que vous soyez journaliste, organisateur de conférences ou partenaire intéressé par la présentation de mon travail, je serai heureux de vous mettre en relation."
-                          : "For media inquiries, interviews, and event collaborations, please reach out through this section. Whether you are a journalist, conference organizer, or partner interested in featuring my work, I'll be happy to connect with you."}
+                        For media inquiries, interviews, and event collaborations, please reach out through this section. Whether you are a journalist, conference organizer, or partner interested in featuring my work, I'll be happy to connect with you.
                       </p>
                     </div>
 
@@ -229,15 +208,13 @@ const ContactUs = () => {
                         className="text-xl font-normal mb-2"
                         style={{ color: '#264653' }}
                       >
-                        {currentLanguage === 'fr' ? "Questions" : "Questions"}
+                        Questions
                       </h3>
                       <p 
                         className="text-base md:text-lg"
                         style={{ color: '#264653' }}
                       >
-                        {currentLanguage === 'fr'
-                          ? "Vous avez une question sur mes services, ma technologie ou sur la façon dont je peux soutenir votre projet ? Utilisez cette section pour me contacter, et je vous fournirai les informations dont vous avez besoin."
-                          : "Have a question about my services, technology, or how we I support your project? Use this section to get in touch, and I will provide you with the information you need."}
+                        Have a question about my services, technology, or how I can support your project? Use this section to get in touch, and I will provide you with the information you need.
                       </p>
                     </div>
                   </div>
@@ -253,7 +230,7 @@ const ContactUs = () => {
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
-                      {currentLanguage === 'fr' ? "Nom complet" : "Full Name"} <span className="text-red-500">*</span>
+                      Full Name <span className="text-red-500">*</span>
                     </Label>
                     <Input
                       id="name"
@@ -274,7 +251,7 @@ const ContactUs = () => {
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
-                      {currentLanguage === 'fr' ? "Adresse e-mail" : "Email Address"} <span className="text-red-500">*</span>
+                      Email Address <span className="text-red-500">*</span>
                     </Label>
                     <Input
                       id="email"
@@ -296,7 +273,7 @@ const ContactUs = () => {
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
-                      {currentLanguage === 'fr' ? "Rôle" : "Role"} <span className="text-red-500">*</span>
+                      Role <span className="text-red-500">*</span>
                     </Label>
                     <Input
                       id="role"
@@ -317,7 +294,7 @@ const ContactUs = () => {
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
-                      {currentLanguage === 'fr' ? "Numéro de téléphone (Facultatif)" : "Phone Number (Optional)"}
+                      Phone Number (Optional)
                     </Label>
                     <Input
                       id="phone"
@@ -337,7 +314,7 @@ const ContactUs = () => {
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
-                      {currentLanguage === 'fr' ? "Nom de l'entreprise / organisation" : "Company / Organization Name"} <span className="text-red-500">*</span>
+                      Company / Organization Name <span className="text-red-500">*</span>
                     </Label>
                     <Input
                       id="company"
@@ -358,7 +335,7 @@ const ContactUs = () => {
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
-                      {currentLanguage === 'fr' ? "Détails de la demande / du projet" : "Request / Project Details"} <span className="text-red-500">*</span>
+                      Request / Project Details <span className="text-red-500">*</span>
                     </Label>
                     <Textarea
                       id="details"
@@ -385,11 +362,7 @@ const ContactUs = () => {
                         borderColor: '#2a9d8f'
                       }}
                     >
-                      {isSubmitting ? (
-                        currentLanguage === 'fr' ? "Envoi..." : "Sending..."
-                      ) : (
-                        currentLanguage === 'fr' ? "Soumettre" : "Submit"
-                      )}
+                      {isSubmitting ? "Sending..." : "Submit"}
                     </Button>
                   </div>
                 </form>
@@ -421,7 +394,7 @@ const ContactUs = () => {
                       className="text-sm sm:text-base md:text-lg font-normal font-inter mb-1"
                       style={{ color: '#FFFFFF' }}
                     >
-                      {currentLanguage === 'fr' ? "Pour l'avenir de l'Algérie" : "AI for the Future of Algeria"}
+                      AI for the Future of Algeria
                     </h3>
 
                     <h2
@@ -430,7 +403,7 @@ const ContactUs = () => {
                         color: '#FFFFFF'
                       }}
                     >
-                      {currentLanguage === 'fr' ? "Votre prochain pas dans l'IA commence" : "Your Next Step in AI Begins"}
+                      Your Next Step in AI Begins
                     </h2>
                     <h2
                       className="text-base sm:text-xl md:text-2xl lg:text-3xl font-normal font-inter mt-1 leading-tight"
@@ -438,16 +411,16 @@ const ContactUs = () => {
                         color: '#FFFFFF'
                       }}
                     >
-                      {currentLanguage === 'fr' ? "ici avec Abderrahim" : "Here with Abderrahim"}
+                      Here with Abderrahim
                     </h2>
                   </div>
 
                   <div className="w-full flex justify-end">
                     <button
                       className="px-3 py-1.5 border border-white bg-transparent text-white font-medium rounded-md hover:bg-white hover:text-background transition-colors duration-300 text-xs"
-                      onClick={handleContactButtonClick}
+                      onClick={() => window.location.href = '/en/contact'}
                     >
-                      {currentLanguage === 'fr' ? "Contact" : "Contact"}
+                      Contact
                     </button>
                   </div>
                 </div>
@@ -460,7 +433,7 @@ const ContactUs = () => {
                         className="text-base sm:text-lg md:text-xl font-normal font-inter mb-1 sm:mb-2"
                         style={{ color: '#FFFFFF' }}
                       >
-                        {currentLanguage === 'fr' ? "Pour l'avenir de l'Algérie" : "AI for the Future of Algeria"}
+                        AI for the Future of Algeria
                       </h3>
 
                       <h2
@@ -469,7 +442,7 @@ const ContactUs = () => {
                           color: '#FFFFFF'
                         }}
                       >
-                        {currentLanguage === 'fr' ? "Votre prochain pas dans l'IA commence" : "Your Next Step in AI Begins"}
+                        Your Next Step in AI Begins
                       </h2>
                       <h2
                         className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal font-inter mt-1 sm:mt-2 leading-tight"
@@ -477,16 +450,16 @@ const ContactUs = () => {
                           color: '#FFFFFF'
                         }}
                       >
-                        {currentLanguage === 'fr' ? "ici avec Abderrahim" : "Here with Abderrahim"}
+                        Here with Abderrahim
                       </h2>
                     </div>
 
                     <div className="self-end">
                       <button
                         className="px-3 py-1.5 sm:px-6 sm:py-3 border border-white bg-transparent text-white font-medium rounded-md hover:bg-white hover:text-background transition-colors duration-300 text-xs sm:text-sm md:text-base"
-                        onClick={handleContactButtonClick}
+                        onClick={() => window.location.href = '/en/contact'}
                       >
-                        {currentLanguage === 'fr' ? "Contact" : "Contact"}
+                        Contact
                       </button>
                     </div>
                   </div>

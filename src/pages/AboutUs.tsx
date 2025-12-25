@@ -4,16 +4,12 @@ import MegaFooter from "@/components/MegaFooter";
 import aaisImpactImage from "@/assets/AAISAlgeriaImpactViz.png";
 import fifthSectionVideo from "@/assets/FifthSectionVid.mp4";
 import { useEffect, useRef } from "react";
+import { SEO } from "@/components/SEO";
 
 const AboutUs = () => {
   const videoRef = useRef(null);
   const location = useLocation();
   const currentLanguage = location.pathname.startsWith('/fr') ? 'fr' : 'en';
-
-  // Scroll to top when component mounts
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -52,6 +48,51 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen bg-background" id="top">
+      <SEO
+        title="About - AI Researcher & Developer Abderrahim Kaci Chaouche"
+        description="Learn about Abderrahim Kaci Chaouche, AI researcher and developer. Winner of first place and Excellence Prize at the National AI Hackathon in Algeria. Dedicated to advancing AI in Algeria and beyond through innovation, research, and local talent."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/about' }]}
+        keywords="about Abderrahim Kaci Chaouche, AI researcher, Algeria AI leader, National AI Hackathon winner, AI innovation Algeria, AI research, machine learning expert, AI developer"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
+      {/* Structured content for featured snippets */}
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Abderrahim Kaci Chaouche",
+            "jobTitle": "AI Researcher and Developer",
+            "alumniOf": [
+              {
+                "@type": "EducationalOrganization",
+                "name": "Algerian Institution"
+              }
+            ],
+            "award": [
+              {
+                "@type": "Award",
+                "name": "First Place National AI Hackathon",
+                "description": "Winner of first place at the National AI Hackathon in Algeria"
+              },
+              {
+                "@type": "Award",
+                "name": "Excellence Prize",
+                "description": "Recipient of the Excellence Prize at the National AI Hackathon in Algeria"
+              }
+            ],
+            "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Neural Networks", "AI Research", "Deep Learning", "Syntron Architecture", "Trafp-ODC"],
+            "description": "AI researcher and developer, winner of first place and Excellence Prize at the National AI Hackathon in Algeria. Developing advanced AI systems including Syntron Architecture and Trafp-ODC.",
+            "url": "https://abdelrrahim.com",
+            "sameAs": [
+              "https://www.linkedin.com/in/abderrahim-kaci-chaouche",
+              "https://github.com/abderrahim-kaci-chaouche"
+            ]
+          }
+        `}
+      </script>
       <Navigation />
       
       {/* Adding spacing between navigation and title */}
@@ -78,10 +119,11 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="lg:w-1/2 flex justify-center">
-            <img 
-              src={aaisImpactImage} 
-              alt="AAIS Algeria Impact Visualization" 
+            <img
+              src={aaisImpactImage}
+              alt="Abderrahim AI Solutions impact visualization showing AI transformation in Algeria"
               className="w-full max-w-lg h-auto rounded-lg"
+              loading="lazy"
             />
           </div>
         </div>

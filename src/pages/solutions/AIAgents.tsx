@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MegaFooter from "@/components/MegaFooter";
 import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 const AIAgents = () => {
   useEffect(() => {
@@ -14,6 +15,15 @@ const AIAgents = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="AI Agents by Abderrahim Kaci Chaouche - Advanced AI Development"
+        description="AI agents development by Abderrahim Kaci Chaouche, AI researcher and developer. Custom AI agents for specific business needs, developed with precision, reliability, and purpose."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/solutions/aiagents' }]}
+        keywords="AI development, artificial intelligence, machine learning, Algeria AI, custom AI agents, AI researcher, AI development, Abderrahim Kaci Chaouche, intelligent automation"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="container mx-auto px-2 sm:px-6 py-16">
         {/* Title */}
@@ -46,10 +56,11 @@ const AIAgents = () => {
           
           {/* Image centered */}
           <div className="flex justify-center px-0 sm:px-8">
-            <img 
-              src={aaisAIAgentsImage} 
-              alt="Visualisation des agents IA AAIS" 
+            <img
+              src={aaisAIAgentsImage}
+              alt="Custom AI agents visualization showing intelligent automation for business processes"
               className="w-[100%] sm:max-w-4xl h-auto"
+              loading="lazy"
             />
           </div>
           
@@ -86,10 +97,11 @@ const AIAgents = () => {
             
             {/* Image */}
             <div className="md:w-1/2 flex justify-start pl-4 md:pl-8">
-              <img 
-                src={aaisAgentCustomImage} 
-                alt="AAIS Agent Custom Visualization" 
+              <img
+                src={aaisAgentCustomImage}
+                alt="Custom AI agent tailored for specific business needs and processes"
                 className="max-w-[90%] md:max-w-full h-auto"
+                loading="lazy"
               />
             </div>
           </div>

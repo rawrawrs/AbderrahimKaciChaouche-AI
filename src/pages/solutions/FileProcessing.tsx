@@ -3,6 +3,7 @@ import aaisFileProcessingImage from "@/assets/AAIScustomfileprocessingVIZ.png";
 import { Link } from "react-router-dom";
 import MegaFooter from "@/components/MegaFooter";
 import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 const FileProcessing = () => {
   useEffect(() => {
@@ -12,6 +13,15 @@ const FileProcessing = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="File Processing by Abderrahim Kaci Chaouche - Advanced AI Development"
+        description="Data and file processing systems development by Abderrahim Kaci Chaouche, AI researcher and developer. Transforming raw data and files into clear, intelligent outcomes."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/solutions/fileprocessing' }]}
+        keywords="file processing, data processing, AI development, artificial intelligence, machine learning, data transformation, intelligent outcomes, Abderrahim Kaci Chaouche"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="container mx-auto px-2 sm:px-6 py-16">
         {/* Title */}
@@ -44,10 +54,11 @@ const FileProcessing = () => {
           
           {/* Image centered */}
           <div className="flex justify-center px-0 sm:px-8">
-            <img 
-              src={aaisFileProcessingImage} 
-              alt="AAIS File Processing Visualization" 
+            <img
+              src={aaisFileProcessingImage}
+              alt="Data and file processing system visualization showing AI transforming raw data into actionable intelligence"
               className="w-[100%] sm:max-w-4xl h-auto"
+              loading="lazy"
             />
           </div>
           

@@ -32,10 +32,11 @@ const SecondSection = () => {
                 drives measurable results.
               </p>
               <div className="mt-6">
-                <img 
-                  src={aaisIndustryViz} 
-                  alt="AI Solutions for Various Industries" 
+                <img
+                  src={aaisIndustryViz}
+                  alt="AI solutions tailored for various industries including healthcare, finance, logistics, and retail"
                   className="w-full max-w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -62,10 +63,11 @@ const SecondSection = () => {
                 practical, adaptable, and designed to deliver immediate impact.
               </p>
               <div className="mt-6">
-                <img 
-                  src={aaisSolutionsViz} 
-                  alt="AI Solutions for Current Problems" 
+                <img
+                  src={aaisSolutionsViz}
+                  alt="Advanced AI solutions addressing current industry challenges and problems"
                   className="w-full max-w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -91,10 +93,11 @@ const SecondSection = () => {
                 Use AI to sharpen your edge in the market. From streamlining operations to unlocking new growth opportunities, our solutions help you move faster, work smarter, and stay ahead of the competition.
               </p>
               <div className="mt-6">
-                <img 
-                  src={aaisAdvantageViz} 
-                  alt="AI Competitive Advantage" 
+                <img
+                  src={aaisAdvantageViz}
+                  alt="Build competitive advantage with AI solutions for market leadership"
                   className="w-full max-w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>

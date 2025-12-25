@@ -30,10 +30,11 @@ const FrenchSecondSection = () => {
                 Mes solutions d’IA sont conçues pour répondre aux défis uniques de chaque secteur. Que ce soit dans la santé, la finance, la logistique ou le commerce de détail, je propose une automatisation intelligente qui s’adapte à vos flux de travail et génère des résultats mesurables.
               </p>
               <div className="mt-6">
-                <img 
-                  src={aaisIndustryViz} 
-                  alt="Solutions d'IA pour diverses industries" 
+                <img
+                  src={aaisIndustryViz}
+                  alt="Solutions d'IA adaptées à divers secteurs d'activité y compris la santé, la finance, la logistique et le commerce de détail"
                   className="w-full max-w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -59,10 +60,11 @@ const FrenchSecondSection = () => {
                 Je développe des systèmes d’IA qui répondent aux défis urgents auxquels les industries sont confrontées aujourd’hui. Mes solutions sont pratiques, adaptables et conçues pour générer un impact immédiat.
               </p>
               <div className="mt-6">
-                <img 
-                  src={aaisSolutionsViz} 
-                  alt="Solutions d'IA pour les problèmes actuels" 
+                <img
+                  src={aaisSolutionsViz}
+                  alt="Solutions d'IA avancées pour résoudre les défis actuels des industries"
                   className="w-full max-w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -88,10 +90,11 @@ const FrenchSecondSection = () => {
                 Exploitez l’IA pour affiner votre avantage sur le marché. De l’optimisation des opérations à l’ouverture de nouvelles opportunités de croissance, mes solutions vous aident à aller plus vite, travailler plus intelligemment et rester en avance sur la concurrence.
               </p>
               <div className="mt-6">
-                <img 
-                  src={aaisAdvantageViz} 
-                  alt="Avantage concurrentiel grâce à l'IA" 
+                <img
+                  src={aaisAdvantageViz}
+                  alt="Construisez votre avantage concurrentiel avec les solutions d'IA pour le leadership sur le marché"
                   className="w-full max-w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>

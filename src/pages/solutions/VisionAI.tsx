@@ -8,6 +8,7 @@ import visionImage3 from "@/assets/VisionDemoChangingImages/AAIScarVIZ4.png";
 import visionImage4 from "@/assets/VisionDemoChangingImages/AAISfactoryVIZ3.webp";
 import visionImage5 from "@/assets/VisionDemoChangingImages/AAISppedetectionVIZ6.webp";
 import visionImage6 from "@/assets/VisionDemoChangingImages/AAISsecurityVIZ5.avif";
+import { SEO } from "@/components/SEO";
 
 const VisionAI = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -36,6 +37,15 @@ const VisionAI = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="AI Vision Solutions by Abderrahim Kaci Chaouche - Advanced AI Development"
+        description="AI Vision solutions development by Abderrahim Kaci Chaouche, AI researcher and developer. Advanced computer vision systems for object detection, facial recognition, medical imaging, and industrial inspection."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/solutions/visionai' }]}
+        keywords="AI vision, computer vision, object detection, facial recognition, medical imaging, industrial inspection, AI development, artificial intelligence, Abderrahim Kaci Chaouche"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="container mx-auto px-2 sm:px-6 py-16">
         {/* Title */}
@@ -73,10 +83,11 @@ const VisionAI = () => {
                 <img
                   key={index}
                   src={image}
-                  alt={`AAIS Vision AI Solution ${index + 1}`}
+                  alt={`AI Vision solution demonstrating visual data analysis and object detection capabilities - Image ${index + 1}`}
                   className={`w-full h-auto transition-opacity duration-1000 ${
                     index === currentImageIndex ? 'opacity-100' : 'opacity-0 absolute inset-0'
                   }`}
+                  loading="lazy"
                 />
               ))}
 

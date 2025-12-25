@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import MegaFooter from "@/components/MegaFooter";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const FrenchResearch = () => {
   useEffect(() => {
@@ -11,6 +12,38 @@ const FrenchResearch = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Recherche IA par Abderrahim Kaci Chaouche - Repousser les Limites de l'IA"
+        description="Explorez la recherche avancée en IA par Abderrahim Kaci Chaouche, y compris l'architecture révolutionnaire Syntron et le pipeline de détection d'objets sans entraînement Trafp-ODC. Recherche de pointe en architectures neuronales et systèmes de détection d'objets."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/research' }]}
+        keywords="recherche IA, recherche IA appliquée, architecture Syntron, Trafp-ODC, architectures neuronales, détection d'objets, recherche intelligence artificielle, recherche machine learning, recherche IA Algérie, systèmes IA innovants"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
+      {/* Structured content for featured snippets */}
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Recherche IA par Abderrahim Kaci Chaouche - Repousser les Limites de l'IA",
+            "author": {
+              "@type": "Person",
+              "name": "Abderrahim Kaci Chaouche"
+            },
+            "datePublished": "2025-08-23",
+            "dateModified": "2025-08-23",
+            "publisher": {
+              "@type": "Person",
+              "name": "Abderrahim Kaci Chaouche"
+            },
+            "description": "Explorez la recherche avancée en IA par Abderrahim Kaci Chaouche, y compris l'architecture révolutionnaire Syntron et le pipeline de détection d'objets sans entraînement Trafp-ODC.",
+            "articleSection": "Recherche en Intelligence Artificielle",
+            "keywords": "recherche IA, architecture Syntron, Trafp-ODC, architectures neuronales, détection d'objets"
+          }
+        `}
+      </script>
       <Navigation />
       <div className="container mx-auto px-6 py-16">
         {/* Title and Description Section */}

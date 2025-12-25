@@ -4,6 +4,7 @@ import MegaFooter from "@/components/MegaFooter";
 import { Link } from "react-router-dom";
 import { BlockMath, InlineMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
+import { SEO } from "@/components/SEO";
 
 // Reusable ExpandableImage component
 const ExpandableImage = ({ src, alt, className = '' }) => {
@@ -57,8 +58,21 @@ const ExpandableImage = ({ src, alt, className = '' }) => {
 };
 
 const SyntronResearch = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Syntron Architecture Research by Abderrahim Kaci Chaouche"
+        description="Revolutionary departure from traditional weight-based neural architectures. Syntrons transform AI into dynamic possibility spaces, enabling emergent thought, counterfactual reasoning, and self-organizing intelligence. Advanced AI research by Abderrahim Kaci Chaouche."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/research/syntron' }]}
+        keywords="Syntron architecture, neural architecture research, dynamic AI systems, emergent intelligence, counterfactual reasoning, self-organizing AI, weight-based neural networks, Algeria AI research, advanced neural architectures, artificial general intelligence"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="pt-6">
         <main className="min-h-screen flex items-center justify-center px-6 md:px-8 py-20">

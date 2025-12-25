@@ -2,10 +2,20 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import MegaFooter from "@/components/MegaFooter";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const FrenchTrafpODCResearch = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Recherche Trafp-ODC par Abderrahim Kaci Chaouche - Détection d'Objets Sans Entraînement"
+        description="Pipeline Sans Entraînement pour la Détection et la Classification d'Objets par Abderrahim Kaci Chaouche. Approche révolutionnaire pour reconnaître des objets sans entraîner des modèles IA complexes, en utilisant l'analyse d'images intelligente et la compréhension structurelle."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/research/trafpodc' }]}
+        keywords="Trafp-ODC, détection d'objets sans entraînement, classification d'objets, reconnaissance IA d'objets, analyse d'images, vision par ordinateur, recherche IA Algérie, détection d'objets avancée, apprentissage zéro-shot, compréhension visuelle"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="pt-6">
         <main className="min-h-screen flex items-center justify-center px-6 md:px-8 py-20">

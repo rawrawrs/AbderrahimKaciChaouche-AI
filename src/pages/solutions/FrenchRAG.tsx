@@ -3,6 +3,7 @@ import ragImage from "@/assets/AAISragVIZ.png";
 import { Link } from "react-router-dom";
 import MegaFooter from "@/components/MegaFooter";
 import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 const FrenchRAG = () => {
   useEffect(() => {
@@ -12,6 +13,15 @@ const FrenchRAG = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Systèmes RAG par Abderrahim Kaci Chaouche - Développement IA Avancé"
+        description="Développement de systèmes RAG (Génération Augmentée par Récupération) par Abderrahim Kaci Chaouche, chercheur et développeur en IA. Architecture IA avancée combinant la récupération d'information avec les modèles de langage pour des analyses précises en temps réel."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/solutions/rag' }]}
+        keywords="systèmes RAG, développement IA, génération augmentée par récupération, récupération d'information, modèles de langage, intelligence artificielle, apprentissage automatique, Abderrahim Kaci Chaouche"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="container mx-auto px-2 sm:px-6 py-16">
         {/* Title */}
@@ -44,10 +54,11 @@ const FrenchRAG = () => {
           
           {/* Image centered */}
           <div className="flex justify-center px-0 sm:px-8">
-            <img 
-              src={ragImage} 
-              alt="Visualisation RAG AAIS" 
+            <img
+              src={ragImage}
+              alt="Visualisation du système de Génération Augmentée par Récupération (RAG) montrant l'IA combinant la recherche d'informations avec les modèles de langage"
               className="w-[100%] sm:max-w-4xl h-auto"
+              loading="lazy"
             />
           </div>
           

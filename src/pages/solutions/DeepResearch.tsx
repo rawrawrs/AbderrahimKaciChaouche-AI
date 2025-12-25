@@ -3,6 +3,7 @@ import deepResearchImage from "@/assets/AAIScutomdeepresearchVIZ.png";
 import { Link } from "react-router-dom";
 import MegaFooter from "@/components/MegaFooter";
 import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 const DeepResearch = () => {
   useEffect(() => {
@@ -12,6 +13,15 @@ const DeepResearch = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO
+        title="Deep Research by Abderrahim Kaci Chaouche - Advanced AI Development"
+        description="Deep research systems development by Abderrahim Kaci Chaouche, AI researcher and developer. Custom deep research solutions combining intelligent reasoning, contextual understanding, and adaptive learning."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/solutions/deepresearch' }]}
+        keywords="deep research, AI development, artificial intelligence, machine learning, intelligent reasoning, contextual understanding, adaptive learning, Abderrahim Kaci Chaouche"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <main className="flex-grow">
         <div className="container mx-auto px-2 sm:px-6 py-16">
@@ -45,10 +55,11 @@ const DeepResearch = () => {
             
             {/* Image centered */}
             <div className="flex justify-center px-0 sm:px-8">
-              <img 
-                src={deepResearchImage} 
-                alt="AAIS Custom Deep Research Visualization" 
+              <img
+                src={deepResearchImage}
+                alt="Custom deep research system visualization showing AI analyzing complex data and uncovering patterns"
                 className="w-[100%] sm:max-w-4xl h-auto"
+                loading="lazy"
               />
             </div>
           </div>

@@ -3,6 +3,7 @@ import ragImage from "@/assets/AAISragVIZ.png";
 import { Link } from "react-router-dom";
 import MegaFooter from "@/components/MegaFooter";
 import { useEffect } from "react";
+import { SEO } from "@/components/SEO";
 
 const RAG = () => {
   useEffect(() => {
@@ -12,6 +13,15 @@ const RAG = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="RAG Systems by Abderrahim Kaci Chaouche - Advanced AI Development"
+        description="RAG (Retrieval Augmented Generation) systems development by Abderrahim Kaci Chaouche, AI researcher and developer. Advanced AI architecture combining information retrieval with language models for accurate, real-time insights."
+        lang="en"
+        alternates={[{ lang: 'fr', href: '/fr/solutions/rag' }]}
+        keywords="RAG systems, AI development, retrieval augmented generation, information retrieval, language models, artificial intelligence, machine learning, Abderrahim Kaci Chaouche"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="container mx-auto px-2 sm:px-6 py-16">
         {/* Title */}
@@ -44,10 +54,11 @@ const RAG = () => {
           
           {/* Image centered */}
           <div className="flex justify-center px-0 sm:px-8">
-            <img 
-              src={ragImage} 
-              alt="AAIS RAG Visualization" 
+            <img
+              src={ragImage}
+              alt="Retrieval Augmented Generation (RAG) system visualization showing AI combining information retrieval with language models"
               className="w-[100%] sm:max-w-4xl h-auto"
+              loading="lazy"
             />
           </div>
           

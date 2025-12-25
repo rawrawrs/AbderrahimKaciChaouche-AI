@@ -8,6 +8,7 @@ import visionImage3 from "@/assets/VisionDemoChangingImages/AAIScarVIZ4.png";
 import visionImage4 from "@/assets/VisionDemoChangingImages/AAISfactoryVIZ3.webp";
 import visionImage5 from "@/assets/VisionDemoChangingImages/AAISppedetectionVIZ6.webp";
 import visionImage6 from "@/assets/VisionDemoChangingImages/AAISsecurityVIZ5.avif";
+import { SEO } from "@/components/SEO";
 
 const FrenchVisionAI = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -36,6 +37,15 @@ const FrenchVisionAI = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Solutions de Vision par IA par Abderrahim Kaci Chaouche - Développement IA Avancé"
+        description="Développement de solutions de Vision par IA par Abderrahim Kaci Chaouche, chercheur et développeur en IA. Systèmes avancés de vision par ordinateur pour la détection d'objets, la reconnaissance faciale, l'imagerie médicale et l'inspection industrielle."
+        lang="fr"
+        alternates={[{ lang: 'en', href: '/en/solutions/visionai' }]}
+        keywords="vision par IA, vision par ordinateur, détection d'objets, reconnaissance faciale, imagerie médicale, inspection industrielle, développement IA, intelligence artificielle, Abderrahim Kaci Chaouche"
+        author="Abderrahim Kaci Chaouche"
+        robots="index, follow"
+      />
       <Navigation />
       <div className="container mx-auto px-2 sm:px-6 py-16">
         {/* Title */}
@@ -73,10 +83,11 @@ const FrenchVisionAI = () => {
                 <img
                   key={index}
                   src={image}
-                  alt={`AAIS Vision par IA Solution ${index + 1}`}
+                  alt={`Solution de Vision par IA démontrant l'analyse de données visuelles et les capacités de détection d'objets - Image ${index + 1}`}
                   className={`w-full h-auto transition-opacity duration-1000 ${
                     index === currentImageIndex ? 'opacity-100' : 'opacity-0 absolute inset-0'
                   }`}
+                  loading="lazy"
                 />
               ))}
 
