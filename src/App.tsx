@@ -221,6 +221,8 @@ const App = () => (
           <Route path="/fr/solutions/fileprocessing" element={<FrenchFileProcessing />} />
           <Route path="/fr/solutions/customdeepresearch" element={<FrenchCustomDeepResearch />} />
           <Route path="/fr/solutions/visionai" element={<FrenchVisionAI />} />
+          <Route path="/syntrons" element={<Navigate to="/en/research/syntron" replace />} />
+          <Route path="/trafp-odc" element={<Navigate to="/en/research/trafpodc" replace />} />
           <Route path="/en/*" element={<NotFound />} />
           <Route path="/fr/*" element={<FrenchNotFound />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
