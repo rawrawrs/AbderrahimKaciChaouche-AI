@@ -62,18 +62,55 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // For Netlify Forms, we'll show a message and reset the form
-    // The actual form submission is handled by Netlify
-    setSubmitMessage({
-      type: "success",
-      text: currentLanguage === 'fr'
-        ? "Merci pour votre message ! Nous vous répondrons bientôt."
-        : "Thank you for your message! We will get back to you soon."
-    });
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-    // Reset form
-    setFormData({ name: "", email: "", role: "", phone: "", company: "", details: "" });
+    if (!formData.name || !formData.email || !formData.role || !formData.company || !formData.details) {
+      setSubmitMessage({
+        type: "error",
+        text: "Please fill in all required fields."
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          language: currentLanguage
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitMessage({
+          type: "success",
+          text: result.message
+        });
+        setFormData({ name: "", email: "", role: "", phone: "", company: "", details: "" });
+      } else {
+        setSubmitMessage({
+          type: "error",
+          text: result.message || "An error occurred while sending your message."
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitMessage({
+        type: "error",
+        text: "Unable to connect to server. Please try again later."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -186,12 +223,7 @@ const ContactUs = () => {
 
               {/* Contact Form - Right side (taking more space) */}
               <div className="lg:pl-6">
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
-                <input type="hidden" name="form-name" value="contact" />
-                <div hidden>
-                  <label htmlFor="bot-field">Don't fill this out if you're human:</label>
-                  <input name="bot-field" />
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Label
                       htmlFor="name"

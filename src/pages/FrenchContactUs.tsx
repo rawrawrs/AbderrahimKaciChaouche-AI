@@ -65,16 +65,64 @@ const FrenchContactUs = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // For Netlify Forms, we'll show a message and reset the form
-    // The actual form submission is handled by Netlify
-    setSubmitMessage({
-      type: "success",
-      text: "Merci pour votre message ! Nous vous répondrons bientôt."
-    });
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-    // Reset form
-    setFormData({ name: "", email: "", role: "", phone: "", company: "", details: "" });
+    // Validate form
+    if (!formData.name || !formData.email || !formData.role || !formData.company || !formData.details) {
+      setSubmitMessage({
+        type: "error",
+        text: "Veuillez remplir tous les champs obligatoires."
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          language: 'fr'
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitMessage({
+          type: "success",
+          text: result.message
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          role: "",
+          phone: "",
+          company: "",
+          details: ""
+        });
+      } else {
+        setSubmitMessage({
+          type: "error",
+          text: result.message || "Une erreur est survenue lors de l'envoi de votre message."
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitMessage({
+        type: "error",
+        text: "Impossible de se connecter au serveur. Veuillez réessayer plus tard."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -187,15 +235,10 @@ const FrenchContactUs = () => {
 
               {/* Contact Form - Right side (taking more space) */}
               <div className="lg:pl-6">
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
-                <input type="hidden" name="form-name" value="contact" />
-                <div hidden>
-                  <label htmlFor="bot-field">Ne remplissez pas ceci si vous êtes humain:</label>
-                  <input name="bot-field" />
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label 
-                      htmlFor="name" 
+                    <Label
+                      htmlFor="name"
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
@@ -208,15 +251,15 @@ const FrenchContactUs = () => {
                       onChange={handleChange}
                       required
                       className="py-3 px-0 text-base border-0 border-b border-[#264653] rounded-none focus:ring-0 focus:border-[#2a9d8f] focus:ring-offset-0 focus:ring-transparent"
-                      style={{ 
+                      style={{
                         color: '#264653'
                       }}
                     />
                   </div>
 
                   <div>
-                    <Label 
-                      htmlFor="email" 
+                    <Label
+                      htmlFor="email"
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
