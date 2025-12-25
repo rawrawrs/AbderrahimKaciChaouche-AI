@@ -18,10 +18,10 @@ const ContactUs = () => {
     company: "",
     details: ""
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{type: string, text: string} | null>(null);
-  
+
   const videoRef = useRef(null);
   const location = useLocation();
   const currentLanguage = location.pathname.startsWith('/fr') ? 'fr' : 'en';
@@ -32,22 +32,22 @@ const ContactUs = () => {
       video.muted = true;
       video.playsInline = true;
       video.preload = "metadata";
-      
+
       const handleCanPlay = () => {
         if (video.paused) {
           video.play().catch(e => console.log("Autoplay prevented:", e));
         }
       };
-      
+
       video.addEventListener('canplay', handleCanPlay);
-      
+
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch(error => {
           console.log("Autoplay failed:", error);
         });
       }
-      
+
       return () => {
         video.removeEventListener('canplay', handleCanPlay);
       };
@@ -62,55 +62,18 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.email || !formData.role || !formData.company || !formData.details) {
-      setSubmitMessage({
-        type: "error",
-        text: "Please fill in all required fields."
-      });
-      return;
-    }
-    
-    setIsSubmitting(true);
-    setSubmitMessage(null);
-    
-    try {
-      const response = await fetch('http://localhost:3001/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          language: currentLanguage
-        }),
-      });
-      
-      const result = await response.json();
-      
-      if (response.ok && result.success) {
-        setSubmitMessage({
-          type: "success",
-          text: result.message
-        });
-        setFormData({ name: "", email: "", role: "", phone: "", company: "", details: "" });
-      } else {
-        setSubmitMessage({
-          type: "error",
-          text: result.message || "An error occurred while sending your message."
-        });
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setSubmitMessage({
-        type: "error",
-        text: "Unable to connect to server. Please try again later."
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // For Netlify Forms, we'll show a message and reset the form
+    // The actual form submission is handled by Netlify
+    setSubmitMessage({
+      type: "success",
+      text: currentLanguage === 'fr'
+        ? "Merci pour votre message ! Nous vous répondrons bientôt."
+        : "Thank you for your message! We will get back to you soon."
+    });
+
+    // Reset form
+    setFormData({ name: "", email: "", role: "", phone: "", company: "", details: "" });
   };
 
   return (
@@ -223,10 +186,15 @@ const ContactUs = () => {
 
               {/* Contact Form - Right side (taking more space) */}
               <div className="lg:pl-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
+                <input type="hidden" name="form-name" value="contact" />
+                <div hidden>
+                  <label htmlFor="bot-field">Don't fill this out if you're human:</label>
+                  <input name="bot-field" />
+                </div>
                   <div>
-                    <Label 
-                      htmlFor="name" 
+                    <Label
+                      htmlFor="name"
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
@@ -239,7 +207,7 @@ const ContactUs = () => {
                       onChange={handleChange}
                       required
                       className="py-3 px-0 text-base border-0 border-b border-[#264653] rounded-none focus:ring-0 focus:border-[#2a9d8f] focus:ring-offset-0 focus:ring-transparent"
-                      style={{ 
+                      style={{
                         color: '#264653'
                       }}
                     />
