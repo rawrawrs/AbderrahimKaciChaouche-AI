@@ -19,7 +19,7 @@ const FrenchContactUs = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState<{type: string, text: string} | null>(null);
+  const [submitMessage, setSubmitMessage] = useState<{ type: string, text: string } | null>(null);
 
   const videoRef = useRef(null);
 
@@ -81,7 +81,7 @@ const FrenchContactUs = () => {
     setSubmitMessage(null);
 
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const response = await fetch('/.netlify/functions/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -141,13 +141,13 @@ const FrenchContactUs = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-24">
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-6"
                 style={{ color: '#264653' }}
               >
                 Contactez Abderrahim
               </h1>
-              <p 
+              <p
                 className="text-lg md:text-xl"
                 style={{ color: '#264653' }}
               >
@@ -156,11 +156,10 @@ const FrenchContactUs = () => {
             </div>
 
             {submitMessage && (
-              <div className={`mb-8 p-4 rounded-lg ${
-                submitMessage.type === "success" 
-                  ? "bg-green-100 text-green-800" 
+              <div className={`mb-8 p-4 rounded-lg ${submitMessage.type === "success"
+                  ? "bg-green-100 text-green-800"
                   : "bg-red-100 text-red-800"
-              }`}>
+                }`}>
                 {submitMessage.text}
               </div>
             )}
@@ -170,13 +169,13 @@ const FrenchContactUs = () => {
               <div className="lg:pr-12">
                 <div className="space-y-12">
                   <div>
-                    <h2 
+                    <h2
                       className="text-2xl font-normal mb-4"
                       style={{ color: '#264653' }}
                     >
                       Contactez-nous
                     </h2>
-                    <p 
+                    <p
                       className="text-base md:text-lg mb-6"
                       style={{ color: '#264653' }}
                     >
@@ -186,13 +185,13 @@ const FrenchContactUs = () => {
 
                   <div className="space-y-6">
                     <div>
-                      <h3 
+                      <h3
                         className="text-xl font-normal mb-2"
                         style={{ color: '#264653' }}
                       >
                         Email
                       </h3>
-                      <p 
+                      <p
                         className="text-lg"
                         style={{ color: '#2a9d8f' }}
                       >
@@ -201,13 +200,13 @@ const FrenchContactUs = () => {
                     </div>
 
                     <div>
-                      <h3 
+                      <h3
                         className="text-xl font-normal mb-2"
                         style={{ color: '#264653' }}
                       >
                         Presse & Événements
                       </h3>
-                      <p 
+                      <p
                         className="text-base md:text-lg"
                         style={{ color: '#264653' }}
                       >
@@ -216,13 +215,13 @@ const FrenchContactUs = () => {
                     </div>
 
                     <div>
-                      <h3 
+                      <h3
                         className="text-xl font-normal mb-2"
                         style={{ color: '#264653' }}
                       >
                         Questions
                       </h3>
-                      <p 
+                      <p
                         className="text-base md:text-lg"
                         style={{ color: '#264653' }}
                       >
@@ -273,15 +272,15 @@ const FrenchContactUs = () => {
                       onChange={handleChange}
                       required
                       className="py-3 px-0 text-base border-0 border-b border-[#264653] rounded-none focus:ring-0 focus:border-[#2a9d8f] focus:ring-offset-0 focus:ring-transparent"
-                      style={{ 
+                      style={{
                         color: '#264653'
                       }}
                     />
                   </div>
 
                   <div>
-                    <Label 
-                      htmlFor="role" 
+                    <Label
+                      htmlFor="role"
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
@@ -294,15 +293,15 @@ const FrenchContactUs = () => {
                       onChange={handleChange}
                       required
                       className="py-3 px-0 text-base border-0 border-b border-[#264653] rounded-none focus:ring-0 focus:border-[#2a9d8f] focus:ring-offset-0 focus:ring-transparent"
-                      style={{ 
+                      style={{
                         color: '#264653'
                       }}
                     />
                   </div>
 
                   <div>
-                    <Label 
-                      htmlFor="phone" 
+                    <Label
+                      htmlFor="phone"
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
@@ -314,15 +313,15 @@ const FrenchContactUs = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="py-3 px-0 text-base border-0 border-b border-[#264653] rounded-none focus:ring-0 focus:border-[#2a9d8f] focus:ring-offset-0 focus:ring-transparent"
-                      style={{ 
+                      style={{
                         color: '#264653'
                       }}
                     />
                   </div>
 
                   <div>
-                    <Label 
-                      htmlFor="company" 
+                    <Label
+                      htmlFor="company"
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
@@ -335,15 +334,15 @@ const FrenchContactUs = () => {
                       onChange={handleChange}
                       required
                       className="py-3 px-0 text-base border-0 border-b border-[#264653] rounded-none focus:ring-0 focus:border-[#2a9d8f] focus:ring-offset-0 focus:ring-transparent"
-                      style={{ 
+                      style={{
                         color: '#264653'
                       }}
                     />
                   </div>
 
                   <div>
-                    <Label 
-                      htmlFor="details" 
+                    <Label
+                      htmlFor="details"
                       className="text-base md:text-lg font-normal mb-2 block"
                       style={{ color: '#264653' }}
                     >
@@ -357,18 +356,18 @@ const FrenchContactUs = () => {
                       required
                       rows={5}
                       className="py-3 px-0 text-base border-0 border-b border-[#264653] rounded-none focus:ring-0 focus:border-[#2a9d8f] resize-none focus:ring-offset-0 focus:ring-transparent"
-                      style={{ 
+                      style={{
                         color: '#264653'
                       }}
                     />
                   </div>
 
                   <div className="flex justify-end">
-                    <Button 
+                    <Button
                       type="submit"
                       disabled={isSubmitting}
                       className="py-3 px-8 text-lg font-medium rounded-lg border focus:ring-0 focus:ring-offset-0"
-                      style={{ 
+                      style={{
                         backgroundColor: '#FFFFFF',
                         color: '#264653',
                         borderColor: '#2a9d8f'
