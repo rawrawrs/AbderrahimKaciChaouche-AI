@@ -35,11 +35,11 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Home - AI Research & Development by Abderrahim Kaci Chaouche"
-        description="Personal website of Abderrahim Kaci Chaouche, AI researcher and developer. Winner of first place and Excellence Prize at the National AI Hackathon in Algeria. Researching advanced AI systems including Syntron Architecture and Trafp-ODC."
+        title="AI Solutions Algeria - Abderrahim Kaci Chaouche | AI Research & Development"
+        description="Pioneering AI solutions in Algeria. Abderrahim Kaci Chaouche provides cutting-edge AI development, including custom Agents, RAG, and deep research for business transformation."
         lang="en"
         alternates={[{ lang: 'fr', href: '/fr/' }]}
-        keywords="AI research, artificial intelligence, machine learning, Algeria AI, Abderrahim Kaci Chaouche, AI development, Syntron Architecture, Trafp-ODC, neural networks, deep learning"
+        keywords="ai solutions algeria, ai algeria, artificial intelligence algeria, custom ai agents, business automation algeria, Abderrahim Kaci Chaouche, AI development, Syntron Architecture, Trafp-ODC, deep learning"
         author="Abderrahim Kaci Chaouche"
         robots="index, follow"
       />

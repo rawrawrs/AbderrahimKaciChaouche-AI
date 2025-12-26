@@ -35,11 +35,11 @@ const FrenchIndex = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Accueil - Recherche & Développement IA par Abderrahim Kaci Chaouche"
-        description="Site personnel d'Abderrahim Kaci Chaouche, chercheur et développeur en IA. Lauréat de la première place et du Prix d'Excellence au Hackathon National d'IA en Algérie. Recherche sur les systèmes d'IA avancés incluant l'Architecture Syntron et Trafp-ODC."
+        title="Solutions IA Algérie - Abderrahim Kaci Chaouche | Recherche & Développement IA"
+        description="Découvrez des solutions IA innovantes en Algérie avec Abderrahim Kaci Chaouche. Transformation digitale via agents IA sur mesure, Deep Research et architectures Syntron."
         lang="fr"
         alternates={[{ lang: 'en', href: '/en/' }]}
-        keywords="recherche IA, intelligence artificielle, apprentissage automatique, IA Algérie, Abderrahim Kaci Chaouche, développement IA, Architecture Syntron, Trafp-ODC, réseaux neuronaux, apprentissage profond"
+        keywords="solutions ia algerie, ia algerie, intelligence artificielle algerie, développement ia algerie, agents ia, Abderrahim Kaci Chaouche, Architecture Syntron, Trafp-ODC, automatisation, deep learning"
         author="Abderrahim Kaci Chaouche"
         robots="index, follow"
       />
