@@ -5,6 +5,7 @@ import { SitemapStream, streamToPromise } from 'sitemap';
 const BASE_URL = 'https://abdelrrahim.com'; // Your personal website domain
 
 // List of your pages
+// List of your pages
 const pages = [
     // English pages and their French alternates
     { url: '/en/', changefreq: 'daily', priority: 1.0, lang: 'en', alternates: [{ lang: 'fr', href: '/fr/' }] },
@@ -17,6 +18,7 @@ const pages = [
     { url: '/en/solutions/rag', changefreq: 'monthly', priority: 0.8, lang: 'en', alternates: [{ lang: 'fr', href: '/fr/solutions/rag' }] },
     { url: '/en/solutions/deepresearch', changefreq: 'monthly', priority: 0.8, lang: 'en', alternates: [{ lang: 'fr', href: '/fr/solutions/deepresearch' }] },
     { url: '/en/solutions/fileprocessing', changefreq: 'monthly', priority: 0.8, lang: 'en', alternates: [{ lang: 'fr', href: '/fr/solutions/fileprocessing' }] },
+    { url: '/en/solutions/customdeepresearch', changefreq: 'monthly', priority: 0.8, lang: 'en', alternates: [{ lang: 'fr', href: '/fr/solutions/customdeepresearch' }] },
     { url: '/en/solutions/visionai', changefreq: 'monthly', priority: 0.8, lang: 'en', alternates: [{ lang: 'fr', href: '/fr/solutions/visionai' }] },
 
     // French pages and their English alternates
@@ -30,11 +32,13 @@ const pages = [
     { url: '/fr/solutions/rag', changefreq: 'monthly', priority: 0.8, lang: 'fr', alternates: [{ lang: 'en', href: '/en/solutions/rag' }] },
     { url: '/fr/solutions/deepresearch', changefreq: 'monthly', priority: 0.8, lang: 'fr', alternates: [{ lang: 'en', href: '/en/solutions/deepresearch' }] },
     { url: '/fr/solutions/fileprocessing', changefreq: 'monthly', priority: 0.8, lang: 'fr', alternates: [{ lang: 'en', href: '/en/solutions/fileprocessing' }] },
+    { url: '/fr/solutions/customdeepresearch', changefreq: 'monthly', priority: 0.8, lang: 'fr', alternates: [{ lang: 'en', href: '/en/solutions/customdeepresearch' }] },
     { url: '/fr/solutions/visionai', changefreq: 'monthly', priority: 0.8, lang: 'fr', alternates: [{ lang: 'en', href: '/en/solutions/visionai' }] },
 ];
 
 async function generateSitemap() {
     const stream = new SitemapStream({ hostname: BASE_URL });
+    const today = new Date().toISOString();
 
     console.log('Generating sitemap...');
 
@@ -43,6 +47,7 @@ async function generateSitemap() {
             url: page.url,
             changefreq: page.changefreq,
             priority: page.priority,
+            lastmod: today,
             links: page.alternates.map(alt => ({
                 lang: alt.lang,
                 url: `${BASE_URL}${alt.href}`,
