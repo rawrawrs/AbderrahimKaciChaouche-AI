@@ -16,16 +16,16 @@ const FrenchAboutUs = () => {
       video.muted = true;
       video.playsInline = true;
       video.preload = "metadata";
-      
+
       // Handle video loading more gracefully
       const handleCanPlay = () => {
         if (video.paused) {
           video.play().catch(e => console.log("Autoplay prevented:", e));
         }
       };
-      
+
       video.addEventListener('canplay', handleCanPlay);
-      
+
       // Attempt to play the video
       const playPromise = video.play();
       if (playPromise !== undefined) {
@@ -33,7 +33,7 @@ const FrenchAboutUs = () => {
           console.log("Autoplay failed:", error);
         });
       }
-      
+
       return () => {
         video.removeEventListener('canplay', handleCanPlay);
       };
@@ -88,10 +88,10 @@ const FrenchAboutUs = () => {
         `}
       </script>
       <Navigation />
-      
+
       {/* Adding spacing between navigation and title */}
       <div className="py-8"></div>
-      
+
       {/* Title Section */}
       <section className="container mx-auto px-6 py-4">
         <h1 className="text-4xl md:text-5xl font-normal text-center mb-4" style={{ color: '#264653', fontFamily: 'Inter' }}>
@@ -129,7 +129,7 @@ const FrenchAboutUs = () => {
         <div className="flex flex-col lg:flex-row gap-12">
           <div className="lg:w-1/2">
             <p className="text-xl leading-relaxed mb-6" style={{ color: '#264653' }}>
-              Abderrahim Kaci Chaouche est un chercheur en intelligence artificielle, développeur et fondateur stratégique, je suis le gagnant de la première place et du Prix d'Excellence au Hackathon National d'IA en Algérie. Dédicacé au développement de solutions d'intelligence artificielle. Ma mission est de transformer les entreprises et les industries grâce à des technologies avancées, capables de résoudre des problèmes concrets et de créer un impact durable.<br/><br/>
+              Abderrahim Kaci Chaouche est un chercheur en intelligence artificielle, développeur et fondateur stratégique, je suis le gagnant de la première place et du Prix d'Excellence au Hackathon National d'IA en Algérie. Dédicacé au développement de solutions d'intelligence artificielle. Ma mission est de transformer les entreprises et les industries grâce à des technologies avancées, capables de résoudre des problèmes concrets et de créer un impact durable.<br /><br />
 
               En tant que chercheur et développeur en IA, Abderrahim incarne une vision claire : placer l'Algérie à la frontière de l'innovation technologique. Je crois que le succès de l'IA en Algérie repose sur l'excellence des talents locaux. C'est pourquoi je m'engage à recruter des équipes talentueuses, à soutenir la formation et à favoriser l'émergence d'un écosystème technologique solide et compétitif dans le pays.
             </p>
@@ -180,12 +180,13 @@ const FrenchAboutUs = () => {
                 en innovations concrètes et ouvrir de nouvelles perspectives pour l'Algérie et le monde.
               </p>
               <div className="text-right">
-                <span 
+                <Link
+                  to="/fr/research"
                   className="px-4 py-2 sm:px-6 sm:py-3 font-medium cursor-pointer transition-colors"
                   style={{ color: '#2a9d8f' }}
                 >
                   Recherches
-                </span>
+                </Link>
               </div>
             </div>
 
@@ -199,7 +200,7 @@ const FrenchAboutUs = () => {
                 et actualités autour de l'intelligence artificielle en Algérie et au-delà.
               </p>
               <div className="text-right">
-                <span 
+                <span
                   className="px-4 py-2 sm:px-6 sm:py-3 font-medium cursor-pointer transition-colors"
                   style={{ color: '#2a9d8f' }}
                 >
