@@ -96,7 +96,7 @@ const ThirdSection = () => {
         }
       },
       {
-        rootMargin: "0px 0px -60% 0px", // Changed to only check bottom margin to prevent initial activation
+        rootMargin: "-40% 0px -40% 0px",
         threshold: [0, 0.25, 0.5, 0.75, 1],
       }
     );

@@ -8,11 +8,8 @@ const SecondSection = () => {
     <section className="w-full bg-background py-12 lg:py-20">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column - Title (only sticky on large screens to prevent mobile auto-scrolling) */}
-          <div className="lg:sticky lg:top-60 hidden lg:block">
-            <ScrollingTitle />
-          </div>
-          <div className="lg:hidden w-full">
+          {/* Left Column - Sticky Title */}
+          <div className="lg:sticky lg:top-60 lg:h-fit">
             <ScrollingTitle />
           </div>
 
