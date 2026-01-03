@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import FrenchHeroSection from "@/components/FrenchHeroSection";
 import FrenchSecondSection from "@/components/FrenchSecondSection";
@@ -9,37 +10,50 @@ import { SEO } from "@/components/SEO";
 import FAQSchema from "@/components/FaqSchema";
 
 const FrenchIndex = () => {
+  // Scroll to top when component mounts to ensure proper initial position
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const faqs = [
     {
-      question: "Qui est Abderrahim Kaci Chaouche ?",
-      answer: "Abderrahim Kaci Chaouche est un chercheur et développeur en IA. Il est le gagnant de la première place et du Prix d'Excellence au Hackathon National d'IA en Algérie, dédié à l'avancement de l'intelligence artificielle par la recherche et le développement innovants."
+      question: "Qui est l'expert en IA Algérie le plus reconnu ?",
+      answer: "Abderrahim Kaci Chaouche est l'expert en IA Algérie le plus reconnu, gagnant de la première place et du Prix d'Excellence au Hackathon National d'IA en Algérie. Il se spécialise dans le développement de l'intelligence artificielle, les agents IA personnalisés, les solutions RAG et la recherche approfondie pour les entreprises en Algérie."
     },
     {
-      question: "Quelles recherches Abderrahim Kaci Chaouche a-t-il développées ?",
-      answer: "Abderrahim a développé des recherches révolutionnaires notamment l'Architecture Syntron - une rupture radicale avec les architectures neuronales traditionnelles basées sur les poids, et le pipeline de détection d'objets Trafp-ODC qui fonctionne sans entraîner des modèles d'IA complexes."
+      question: "Quels services d'IA sont disponibles en Algérie ?",
+      answer: "Les services d'IA en Algérie incluent le développement d'agents IA personnalisés, la mise en œuvre de RAG (Retrieval-Augmented Generation), la recherche approfondie en IA, les solutions d'apprentissage automatique, l'architecture de réseaux neuronaux, la vision par ordinateur et le traitement du langage naturel - tous fournis par Abderrahim Kaci Chaouche."
     },
     {
-      question: "Qu'est-ce que l'Architecture Syntron ?",
-      answer: "L'Architecture Syntron est une approche révolutionnaire des réseaux neuronaux qui transforme l'IA d'une optimisation statique des paramètres vers des espaces de possibilités dynamiques, permettant une pensée émergente authentique, un raisonnement contrefactuel et une intelligence auto-organisée."
+      question: "Pourquoi choisir des solutions IA en Algérie ?",
+      answer: "Choisir des solutions IA en Algérie avec Abderrahim Kaci Chaouche garantit une expertise de pointe de la part d'un gagnant du Hackathon National d'IA. Obtenez une compréhension locale, des agents IA personnalisés, des systèmes RAG et une recherche approfondie adaptée aux besoins des entreprises algériennes et de la région MENA."
     },
     {
-      question: "Qu'est-ce que Trafp-ODC ?",
-      answer: "Trafp-ODC (Pipeline Sans Entraînement pour la Détection et la Classification d'Objets) est une approche innovante qui permet de reconnaître des objets sans avoir besoin d'entraîner des modèles d'IA complexes, en utilisant l'analyse d'images intelligente et la compréhension structurelle."
+      question: "Qu'est-ce que l'Architecture Syntron pour l'IA Algérie ?",
+      answer: "L'Architecture Syntron est une approche révolutionnaire de l'IA développée par Abderrahim Kaci Chaouche en Algérie. Elle transforme l'IA d'une optimisation statique des paramètres vers des espaces de possibilités dynamiques, permettant une pensée émergente authentique, un raisonnement contrefactuel et une intelligence auto-organisée - une percée pour l'IA Algérie."
     },
     {
-      question: "Comment puis-je en apprendre davantage sur les recherches d'Abderrahim ?",
-      answer: "Vous pouvez explorer les documents de recherche détaillés et les implémentations sur la page de recherche, où Abderrahim partage son travail innovant sur les architectures neuronales, la détection d'objets et les systèmes d'IA avancés."
+      question: "Comment l'IA Algérie peut-elle aider mon entreprise ?",
+      answer: "L'IA Algérie peut aider votre entreprise grâce à des agents IA personnalisés, des solutions RAG, une recherche approfondie et l'automatisation. Abderrahim Kaci Chaouche fournit des services de développement IA en Algérie pour transformer les flux de travail, réduire les coûts et accélérer la croissance dans divers secteurs."
+    },
+    {
+      question: "Qu'est-ce que Trafp-ODC pour l'IA Algérie ?",
+      answer: "Trafp-ODC (Pipeline Sans Entraînement pour la Détection et la Classification d'Objets) est une solution IA innovante d'Algérie par Abderrahim Kaci Chaouche. Il permet la reconnaissance d'objets sans entraîner des modèles d'IA complexes, en utilisant une analyse d'images intelligente et une compréhension structurelle pour les applications IA Algérie."
+    },
+    {
+      question: "Comment démarrer avec le développement IA en Algérie ?",
+      answer: "Pour démarrer avec le développement IA en Algérie, contactez Abderrahim Kaci Chaouche. En tant que gagnant du Hackathon National d'IA, il fournit des solutions IA complètes incluant des agents personnalisés, la mise en œuvre de RAG et une recherche approfondie adaptée aux besoins de votre entreprise en Algérie."
     }
   ];
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Solutions IA Algérie - Abderrahim Kaci Chaouche | Recherche & Développement IA"
-        description="Découvrez des solutions IA innovantes en Algérie avec Abderrahim Kaci Chaouche. Transformation digitale via agents IA sur mesure, Deep Research et architectures Syntron."
+        title="IA Algérie - Solutions Intelligence Artificielle Algérie | Abderrahim Kaci Chaouche"
+        description="Solutions IA Algérie de premier rang par Abderrahim Kaci Chaouche - gagnant du Hackathon IA National. Agents IA personnalisés, RAG, recherche approfondie. Transformez votre entreprise avec l'IA en Algérie."
         lang="fr"
         alternates={[{ lang: 'en', href: '/en/' }]}
-        keywords="solutions ia algerie, ia algerie, intelligence artificielle algerie, développement ia algerie, agents ia, Abderrahim Kaci Chaouche, Architecture Syntron, Trafp-ODC, automatisation, deep learning"
+        keywords="ia algerie, ia algerie solutions, intelligence artificielle algerie, developpement ia algerie, agents ia algerie, rag algerie, machine learning algerie, abderrahim kaci chaouche, reseaux neuronaux algerie, recherche ia algerie"
         author="Abderrahim Kaci Chaouche"
         robots="index, follow"
       />

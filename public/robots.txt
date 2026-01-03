@@ -3,6 +3,8 @@ Allow: /
 Disallow: /cgi-bin/
 Disallow: /private/
 Disallow: /temp/
+Disallow: /admin/
+Disallow: /api/
 
 # Sitemaps
 Sitemap: https://abdelrrahim.com/sitemap.xml
@@ -10,7 +12,7 @@ Sitemap: https://abdelrrahim.com/sitemap.xml
 # Host
 Host: https://abdelrrahim.com
 
-# Crowlers
+# Crawl Optimization
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 2
@@ -18,3 +20,6 @@ Crawl-delay: 2
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 2
+
+User-agent: *
+Crawl-delay: 5

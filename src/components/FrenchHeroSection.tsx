@@ -12,7 +12,7 @@ const FrenchHeroSection = () => {
         <div className="flex flex-col items-start text-left max-w-4xl space-y-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight" style={{ color: '#264653' }}>
             <div className="flex flex-col md:flex-row md:whitespace-nowrap">
-              <span>L'IA pour un progrès&nbsp;</span>
+              <span>L'IA Algérie pour le progrès&nbsp;</span>
               <AnimatedText 
                 phrases={["sans frontières", "par l'intelligence", "qui compte"]}
               />
@@ -20,7 +20,7 @@ const FrenchHeroSection = () => {
           </h1>
           
           <p className="text-lg md:text-xl leading-relaxed max-w-3xl" style={{ color: '#264653' }}>
-            Exploitez la puissance de l’IA avec Abderrahim Kaci Chaouche pour transformer les flux de travail, réduire les coûts et accélérer la croissance. Nos solutions intelligentes s’adaptent, évoluent et créent un impact durable — en résolvant des problèmes vieux de plusieurs décennies à travers les industries et la société.
+            Leader en IA Algérie avec Abderrahim Kaci Chaouche, gagnant du Hackathon IA National. Transformez vos flux de travail, réduisez les coûts et accélérez la croissance avec des solutions d'intelligence artificielle de pointe en Algérie.
           </p>
 
           {/* CTA Links */}

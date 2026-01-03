@@ -95,20 +95,21 @@ async function getRouteData(route) {
         }
     }
 
-    // Heuristics for priority and changefreq
     let priority = 0.8;
     let changefreq = 'monthly';
 
-    // Landing pages
     if (route.path === '/en' || route.path === '/fr') {
         priority = 1.0;
         changefreq = 'daily';
     } else if (route.path.includes('research') || route.path.includes('solutions')) {
-        priority = 0.9;
+        priority = 0.95;
         changefreq = 'weekly';
     } else if (route.path.includes('contact') || route.path.includes('about')) {
-        priority = 0.7;
+        priority = 0.8;
         changefreq = 'monthly';
+    } else if (route.path.includes('aiagents') || route.path.includes('rag')) {
+        priority = 0.92;
+        changefreq = 'weekly';
     }
 
     return {

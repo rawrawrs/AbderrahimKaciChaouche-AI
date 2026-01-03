@@ -10,7 +10,7 @@ type FAQSchemaProps = {
   lang: 'en' | 'fr';
 };
 
-const BASE_URL = 'https://aais-solutions.com';
+const BASE_URL = 'https://abdelrrahim.com';
 
 const FAQSchema = ({ faqs, lang }: FAQSchemaProps) => {
   const faqSchema = {

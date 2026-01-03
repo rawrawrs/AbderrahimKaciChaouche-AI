@@ -12,7 +12,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-start text-left max-w-4xl space-y-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight" style={{ color: '#264653' }}>
             <div className="flex flex-col md:flex-row md:whitespace-nowrap">
-              <span>AI for Progress&nbsp;</span>
+              <span>AI Algeria for Progress&nbsp;</span>
               <AnimatedText 
                 phrases={["Beyond Boundaries", "Through Intelligence", "That Matters"]}
               />
@@ -20,9 +20,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-lg md:text-xl leading-relaxed max-w-3xl" style={{ color: '#264653' }}>
-            Harness the power of AI with Abderrahim kaci chaouche to transform workflows, reduce costs, and
-            accelerate growth. Our intelligent solutions adapt, scale, and create lasting impact — solving
-            decades-old problems across industries and society
+            Leading AI Algeria development by Abderrahim Kaci Chaouche, National AI Hackathon winner. Transform workflows, reduce costs, and accelerate growth with cutting-edge artificial intelligence solutions in Algeria.
           </p>
 
           {/* CTA Links */}
