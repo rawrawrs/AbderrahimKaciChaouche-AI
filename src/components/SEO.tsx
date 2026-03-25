@@ -23,7 +23,7 @@ export const SEO = ({
     alternates,
     ogType = 'website',
     ogImage = `${BASE_URL}/og-image.png`,
-    keywords = 'ai algeria, ia algerie, artificial intelligence algeria, intelligence artificielle algerie, AI solutions Algeria, IA Algérie, Abderrahim Kaci Chaouche, AI development Algeria, machine learning Algeria, neural networks Algeria, AI research Algeria',
+    keywords = 'Algeria AI, IA Algérie, AI Algeria, IA Algérie solutions, artificial intelligence algeria, intelligence artificielle algerie, AI solutions Algeria, IA Algérie expert, Abderrahim Kaci Chaouche, AI development Algeria, machine learning Algeria, neural networks Algeria, AI research Algeria, expert IA Algérie',
     author = 'Abderrahim Kaci Chaouche',
     robots = 'index, follow',
     canonical,
@@ -54,12 +54,12 @@ export const SEO = ({
             <meta property="og:type" content={article ? 'article' : ogType} />
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={description} />
-            <meta property="og:site_name" content="Abderrahim AI Solutions - AI Algeria" />
+            <meta property="og:site_name" content="Abderrahim AI Solutions - AI Algeria - IA Algérie" />
             <meta property="og:url" content={currentCanonical} />
             <meta property="og:image" content={ogImage} />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
-            <meta property="og:image:alt" content="Abderrahim AI Solutions - Leading AI Development in Algeria" />
+            <meta property="og:image:alt" content="Abderrahim AI Solutions - Leading AI Development in Algeria (AI Algeria / IA Algérie)" />
             <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'fr_FR'} />
             {alternates && alternates.map(({ lang: altLang }) => (
                  <meta key={altLang} property="og:locale:alternate" content={altLang === 'en' ? 'en_US' : 'fr_FR'} />
@@ -69,7 +69,7 @@ export const SEO = ({
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={ogImage} />
-            <meta name="twitter:image:alt" content="Abderrahim AI Solutions - Leading AI Development in Algeria" />
+            <meta name="twitter:image:alt" content="Abderrahim AI Solutions - Leading AI Development in Algeria (AI Algeria / IA Algérie)" />
 
             <meta name="theme-color" content="#2a9d8f" />
             <meta name="msapplication-TileColor" content="#2a9d8f" />
@@ -80,10 +80,10 @@ export const SEO = ({
                     {
                         "@context": "https://schema.org",
                         "@type": "Organization",
-                        "name": "Abderrahim AI Solutions",
+                        "name": "Abderrahim AI Solutions - AI Algeria",
                         "url": "${BASE_URL}",
                         "logo": "${BASE_URL}/logo.png",
-                        "description": "Leading AI solutions provider in Algeria. Abderrahim Kaci Chaouche specializes in artificial intelligence development, custom AI agents, RAG solutions, and deep research for business transformation across Algeria and the MENA region.",
+                        "description": "Leading Algeria AI solutions provider and IA Algérie expert. Abderrahim Kaci Chaouche specializes in AI Algeria development, custom AI agents, RAG solutions, and deep research for business transformation across Algeria and the MENA region.",
                         "founder": {
                             "@type": "Person",
                             "name": "Abderrahim Kaci Chaouche",

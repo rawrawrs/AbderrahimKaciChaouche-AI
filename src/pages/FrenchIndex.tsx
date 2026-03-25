@@ -49,14 +49,15 @@ const FrenchIndex = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="IA Algérie - Solutions Intelligence Artificielle Algérie | Abderrahim Kaci Chaouche"
-        description="Solutions IA Algérie de premier rang par Abderrahim Kaci Chaouche - gagnant du Hackathon IA National. Agents IA personnalisés, RAG, recherche approfondie. Transformez votre entreprise avec l'IA en Algérie."
+        title="IA Algérie - Algeria AI | Solutions d'Intelligence Artificielle en Algérie"
+        description="L'expert en IA Algérie & Algeria AI, Abderrahim Kaci Chaouche - gagnant du Hackathon IA National. Premier developpement d'IA en Algérie : Agents IA, RAG, recherche."
         lang="fr"
         alternates={[{ lang: 'en', href: '/en/' }]}
-        keywords="ia algerie, ia algerie solutions, intelligence artificielle algerie, developpement ia algerie, agents ia algerie, rag algerie, machine learning algerie, abderrahim kaci chaouche, reseaux neuronaux algerie, recherche ia algerie"
+        keywords="IA Algérie, Algeria AI, solutions IA Algérie, intelligence artificielle algerie, developpement ia algerie, agents ia algerie, rag algerie, machine learning algeria, abderrahim kaci chaouche, reseaux neuronaux algerie, recherche ia algerie, expert IA Algérie"
         author="Abderrahim Kaci Chaouche"
         robots="index, follow"
       />
+
       <FAQSchema faqs={faqs} lang="fr" />
       <Navigation />
       <main className="flex-grow">

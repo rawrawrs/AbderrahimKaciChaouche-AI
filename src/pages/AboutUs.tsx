@@ -49,11 +49,11 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-background" id="top">
       <SEO
-        title="About - AI Researcher & Developer Abderrahim Kaci Chaouche"
-        description="Learn about Abderrahim Kaci Chaouche, AI researcher and developer. Winner of first place and Excellence Prize at the National AI Hackathon in Algeria. Dedicated to advancing AI in Algeria and beyond through innovation, research, and local talent."
+        title="Algeria AI & IA Algérie Leader - About Abderrahim Kaci Chaouche"
+        description="Learn about Abderrahim Kaci Chaouche, the Algeria AI & IA Algérie expert. Winner of National AI Hackathon in Algeria. Dedicated to advancing AI in Algeria through innovation and local talent."
         lang="en"
         alternates={[{ lang: 'fr', href: '/fr/about' }]}
-        keywords="about Abderrahim Kaci Chaouche, AI researcher, Algeria AI leader, National AI Hackathon winner, AI innovation Algeria, AI research, machine learning expert, AI developer"
+        keywords="Algeria AI, IA Algérie, about Abderrahim Kaci Chaouche, AI researcher, Algeria AI leader, National AI Hackathon winner, AI innovation Algeria, AI research, machine learning expert, AI developer"
         author="Abderrahim Kaci Chaouche"
         robots="index, follow"
       />
@@ -101,7 +101,7 @@ const AboutUs = () => {
       {/* Title Section */}
       <section className="container mx-auto px-6 py-4">
         <h1 className="text-4xl md:text-5xl font-normal text-center mb-4" style={{ color: '#264653', fontFamily: 'Inter' }}>
-          From Algeria, for Algeria and beyond.
+          Algeria AI: From Algeria, for Algeria and beyond.
         </h1>
       </section>
 

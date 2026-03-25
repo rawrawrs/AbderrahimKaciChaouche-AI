@@ -12,7 +12,7 @@ const FrenchHeroSection = () => {
         <div className="flex flex-col items-start text-left max-w-4xl space-y-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight" style={{ color: '#264653' }}>
             <div className="flex flex-col md:flex-row md:whitespace-nowrap">
-              <span>L'IA Algérie pour le progrès&nbsp;</span>
+              <span>IA Algérie pour le progrès&nbsp;</span>
               <AnimatedText 
                 phrases={["sans frontières", "par l'intelligence", "qui compte"]}
               />

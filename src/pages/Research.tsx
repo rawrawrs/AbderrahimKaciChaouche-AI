@@ -13,11 +13,11 @@ const Research = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="AI Research by Abderrahim Kaci Chaouche - Pushing the Boundaries of AI"
-        description="Explore the cutting-edge AI research by Abderrahim Kaci Chaouche, including the revolutionary Syntron Architecture and the training-free Trafp-ODC object detection pipeline. Advanced research in neural architectures and object detection systems."
+        title="Algeria AI Research - Breakthroughs by Abderrahim Kaci Chaouche"
+        description="Explore cutting-edge Algeria AI research. Revolutionary Syntron Architecture and Trafp-ODC object detection. Pioneering artificial intelligence research in Algeria."
         lang="en"
         alternates={[{ lang: 'fr', href: '/fr/research' }]}
-        keywords="AI research, applied AI research, Syntron Architecture, Trafp-ODC, neural architectures, object detection, artificial intelligence research, machine learning research, Algeria AI research, innovative AI systems"
+        keywords="Algeria AI research, AI Algeria, IA Algérie research, Syntron Architecture, Trafp-ODC, neural architectures, object detection, artificial intelligence research Algeria"
         author="Abderrahim Kaci Chaouche"
         robots="index, follow"
       />
@@ -52,13 +52,13 @@ const Research = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6"
             style={{ color: '#264653' }}
           >
-            Pushing the Boundaries of Applied AI Research
+            Algeria AI Research: Pushing the Boundaries
           </h1>
           <p
             className="text-xl md:text-2xl max-w-3xl mx-auto"
             style={{ color: '#264653' }}
           >
-            Advancing knowledge and innovation in artificial intelligence
+            Advancing knowledge and innovation in artificial intelligence from Algeria
           </p>
         </div>
 

@@ -43,11 +43,11 @@ const FrenchAboutUs = () => {
   return (
     <div className="min-h-screen bg-background" id="top">
       <SEO
-        title="À Propos - Chercheur & Développeur IA Abderrahim Kaci Chaouche"
-        description="Découvrez Abderrahim Kaci Chaouche, chercheur et développeur en IA. Lauréat de la première place et du Prix d'Excellence au Hackathon National d'IA en Algérie. Dédicacé à l'avancement de l'IA en Algérie et au-delà par l'innovation, la recherche et le talent local."
+        title="Leader IA Algérie & Algeria AI - À Propos d'Abderrahim Kaci Chaouche"
+        description="Découvrez Abderrahim Kaci Chaouche, l'expert IA Algérie & Algeria AI. Lauréat du Hackathon National d'IA en Algérie. Dédicacé à l'avancement de l'IA en Algérie."
         lang="fr"
         alternates={[{ lang: 'en', href: '/en/about' }]}
-        keywords="à propos Abderrahim Kaci Chaouche, chercheur en IA, leader IA Algérie, lauréat Hackathon IA Algérie, innovation IA Algérie, recherche IA, expert machine learning, développeur IA"
+        keywords="IA Algérie, Algeria AI, à propos Abderrahim Kaci Chaouche, chercheur en IA, leader IA Algérie, lauréat Hackathon IA Algérie, innovation IA Algérie, recherche IA, expert machine learning, développeur IA"
         author="Abderrahim Kaci Chaouche"
         robots="index, follow"
       />
@@ -95,7 +95,7 @@ const FrenchAboutUs = () => {
       {/* Title Section */}
       <section className="container mx-auto px-6 py-4">
         <h1 className="text-4xl md:text-5xl font-normal text-center mb-4" style={{ color: '#264653', fontFamily: 'Inter' }}>
-          De l'Algérie, pour l'Algérie et au-delà
+          IA Algérie : De l'Algérie, pour l'Algérie et au-delà
         </h1>
       </section>
 

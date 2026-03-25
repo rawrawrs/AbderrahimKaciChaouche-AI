@@ -12,7 +12,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-start text-left max-w-4xl space-y-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight" style={{ color: '#264653' }}>
             <div className="flex flex-col md:flex-row md:whitespace-nowrap">
-              <span>AI Algeria for Progress&nbsp;</span>
+              <span>Algeria AI for Progress&nbsp;</span>
               <AnimatedText 
                 phrases={["Beyond Boundaries", "Through Intelligence", "That Matters"]}
               />

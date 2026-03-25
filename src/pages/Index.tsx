@@ -49,14 +49,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="AI Algeria - Leading AI Solutions & Development in Algeria | Abderrahim Kaci Chaouche"
-        description="Premier AI Algeria development by Abderrahim Kaci Chaouche - National AI Hackathon winner. Custom AI agents, RAG, deep research. Transform your business with AI Algeria solutions today."
+        title="Algeria AI - IA Algérie | Leading AI Solutions & Development"
+        description="Algeria AI & IA Algérie expert Abderrahim Kaci Chaouche - National AI Hackathon winner. Premier AI Algeria development: Custom AI agents, RAG, deep research. Transform your business today."
         lang="en"
         alternates={[{ lang: 'fr', href: '/fr/' }]}
-        keywords="ai algeria, ai algeria solutions, artificial intelligence algeria, ai development algeria, custom ai agents algeria, rag algeria, machine learning algeria, abderrahim kaci chaouche, neural networks algeria, ai research algeria"
+        keywords="Algeria AI, IA Algérie, AI Algeria, IA Algérie solutions, artificial intelligence algeria, ai development algeria, custom ai agents algeria, rag algerie, machine learning algeria, abderrahim kaci chaouche, neural networks algeria, ai research algeria, expert IA Algérie"
         author="Abderrahim Kaci Chaouche"
         robots="index, follow"
       />
+
       <FAQSchema faqs={faqs} lang="en" />
       <Navigation />
       <main className="flex-grow">

@@ -13,11 +13,11 @@ const FrenchResearch = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Recherche IA par Abderrahim Kaci Chaouche - Repousser les Limites de l'IA"
-        description="Explorez la recherche avancée en IA par Abderrahim Kaci Chaouche, y compris l'architecture révolutionnaire Syntron et le pipeline de détection d'objets sans entraînement Trafp-ODC. Recherche de pointe en architectures neuronales et systèmes de détection d'objets."
+        title="Recherche IA Algérie - Innovations par Abderrahim Kaci Chaouche"
+        description="Explorez la recherche IA Algérie de pointe. Architecture Syntron révolutionnaire et détection d'objets Trafp-ODC. Recherche en intelligence artificielle en Algérie."
         lang="fr"
         alternates={[{ lang: 'en', href: '/en/research' }]}
-        keywords="recherche IA, recherche IA appliquée, architecture Syntron, Trafp-ODC, architectures neuronales, détection d'objets, recherche intelligence artificielle, recherche machine learning, recherche IA Algérie, systèmes IA innovants"
+        keywords="Recherche IA Algérie, IA Algérie, Algeria AI recherche, architecture Syntron, Trafp-ODC, architectures neuronales, détection d'objets, recherche intelligence artificielle Algérie"
         author="Abderrahim Kaci Chaouche"
         robots="index, follow"
       />
@@ -52,13 +52,13 @@ const FrenchResearch = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6"
             style={{ color: '#264653' }}
           >
-            Repousser les Limites de la Recherche en IA Appliquée
+            Recherche IA Algérie : Repousser les Limites
           </h1>
           <p
             className="text-xl md:text-2xl max-w-3xl mx-auto"
             style={{ color: '#264653' }}
           >
-            Faire progresser la connaissance et l'innovation dans l'intelligence artificielle
+            Faire progresser la connaissance et l'innovation dans l'IA depuis l'Algérie
           </p>
         </div>
 
