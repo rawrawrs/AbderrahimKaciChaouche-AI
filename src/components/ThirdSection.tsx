@@ -5,7 +5,7 @@ const solutionsDataEn = [
   {
     id: "AI Agents",
     title: "AI Agents",
-    description: "Abderrahim delivers AI agents that seamlessly connect to your apps, tools, and libraries—automating repetitive tasks, streamlining workflows, and reducing manual effort. Our agents are designed to adapt to your processes, helping your team save time, cut costs, and focus on the work that truly drives growth.",
+    description: "Abderrahim delivers AI agents in Algeria that seamlessly connect to your apps, tools, and libraries—automating repetitive tasks, streamlining workflows, and reducing manual effort. Our agents are designed to adapt to your processes, helping your team save time, cut costs, and focus on the work that truly drives growth.",
     cta: "Request an AI agent",
     ctaHref: "/en/contact"
   },
@@ -19,28 +19,28 @@ const solutionsDataEn = [
   {
     id: "Custom Deep Research",
     title: "Custom Deep Research",
-    description: "With Custom Deep Research, we design AI systems that go beyond surface-level answers. By connecting to your industry data, reports, and knowledge sources, our AI uncovers precise insights, solves complex questions, and delivers research tailored to your business needs.",
+    description: "With Custom Deep Research, we design AI systems in Algeria that go beyond surface-level answers. By connecting to your industry data, reports, and knowledge sources, our AI uncovers precise insights, solves complex questions, and delivers research tailored to your business needs.",
     cta: "Start research project",
     ctaHref: "/en/contact"
   },
   {
     id: "File Processing",
     title: "File Processing",
-    description: "With AI-powered File Processing, automatically read, analyze, and extract insights from documents, spreadsheets, PDFs, and more. Turn unstructured files into organized, actionable data.",
+    description: "With AI-powered File Processing in Algeria, automatically read, analyze, and extract insights from documents, spreadsheets, PDFs, and more. Turn unstructured files into organized, actionable data.",
     cta: "Process files now",
     ctaHref: "/en/contact"
   },
   {
     id: "AI Vision Solution",
     title: "AI Vision Solution",
-    description: "Our AI Vision Solutions enable accurate detection, counting, and analysis of objects in images and video. From quality control to activity monitoring, we deliver custom-built vision systems designed for your industry needs.",
+    description: "Our AI Vision Solutions in Algeria enable accurate detection, counting, and analysis of objects in images and video. From quality control to activity monitoring, we deliver custom-built vision systems designed for your industry needs.",
     cta: "Explore vision AI",
     ctaHref: "/en/contact"
   },
   {
     id: "Custom Solutions",
     title: "Custom Solutions",
-    description: "With Custom Solutions, Abderrahim designs AI systems tailored to your unique challenges. Whether you need automation, analytics, or industry-specific intelligence, we build solutions that align with your goals, adapt to your workflows, and solve real problems.",
+    description: "With custom solutions in Algeria, Abderrahim designs AI systems in Algeria tailored to your unique challenges. Whether you need automation, analytics, or industry-specific intelligence, we build solutions that align with your goals, adapt to your workflows, and solve real problems.",
     cta: "Request custom solution",
     ctaHref: "/en/contact"
   }
@@ -138,7 +138,7 @@ const ThirdSection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-normal font-inter"
             style={{ color: '#264653' }}
           >
-            Abderrahim AI Solutions for You
+            Algeria AI Solutions for You
           </h2>
         </div>
 

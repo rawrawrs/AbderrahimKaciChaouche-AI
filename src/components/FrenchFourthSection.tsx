@@ -38,7 +38,7 @@ const FrenchFourthSection = () => {
                 className="text-base md:text-lg leading-relaxed font-inter mt-4 text-left md:text-center max-w-xs"
                 style={{ color: '#264653' }}
               >
-                Mes solutions cloud sont conçues avec la sécurité intégrée. Les données sont sécurisées, les accès sont contrôlés et les normes de conformité sont respectées par conception. Vous profitez ainsi de la flexibilité et de l’évolutivité du cloud sans jamais compromettre la confiance.
+                Mes solutions d'ia cloud sont conçues avec la sécurité intégrée. Les données sont sécurisées, les accès sont contrôlés et les normes de conformité sont respectées par conception. Vous profitez ainsi de la flexibilité et de l’évolutivité du cloud sans jamais compromettre la confiance.
               </p>
                         </div>
             
@@ -57,7 +57,7 @@ const FrenchFourthSection = () => {
                 className="text-base md:text-lg leading-relaxed font-inter mt-4 text-left md:text-center max-w-xs"
                 style={{ color: '#264653' }}
               >
-                Pour les organisations qui nécessitent un contrôle total, mes solutions locales maintiennent vos données en interne, sur votre machine, et sous votre gestion. Avec une sécurité de niveau entreprise et une conformité stricte, vous bénéficiez de la puissance de l’IA tout en garantissant que vos informations sensibles restent dans votre environnement.
+                Pour les organisations qui nécessitent un contrôle total, mes solutions d'ia locales maintiennent vos données en interne, sur votre machine, et sous votre gestion. Avec une sécurité de niveau entreprise et une conformité stricte, vous bénéficiez de la puissance de l’IA tout en garantissant que vos informations sensibles restent dans votre environnement.
               </p>
             </div>
           </div>

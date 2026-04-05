@@ -27,7 +27,7 @@ const SecondSection = () => {
                 className="text-base md:text-lg leading-relaxed"
                 style={{ color: '#264653' }}
               >
-                Our AI solutions are designed to meet the unique challenges of every sector. Whether in healthcare, 
+                Our AI solutions are designed to meet the unique challenges of every sector in Algeria. Whether in healthcare, 
                 finance, logistics, or retail, we deliver intelligent automation that adapts to your workflows and 
                 drives measurable results.
               </p>
@@ -59,7 +59,7 @@ const SecondSection = () => {
                 className="text-base md:text-lg leading-relaxed"
                 style={{ color: '#264653' }}
               >
-                We build AI systems that address the urgent challenges industries face today. Our solutions are 
+                We build AI systems that address the urgent challenges industries face today in Algeria. Our solutions are 
                 practical, adaptable, and designed to deliver immediate impact.
               </p>
               <div className="mt-6">
@@ -90,7 +90,7 @@ const SecondSection = () => {
                 className="text-base md:text-lg leading-relaxed"
                 style={{ color: '#264653' }}
               >
-                Use AI to sharpen your edge in the market. From streamlining operations to unlocking new growth opportunities, our solutions help you move faster, work smarter, and stay ahead of the competition.
+                Use AI to sharpen your edge in the Algerian market. From streamlining operations to unlocking new growth opportunities, our solutions help you move faster, work smarter, and stay ahead of the competition.
               </p>
               <div className="mt-6">
                 <img

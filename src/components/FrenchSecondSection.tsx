@@ -27,7 +27,7 @@ const FrenchSecondSection = () => {
                 className="text-base md:text-lg leading-relaxed"
                 style={{ color: '#264653' }}
               >
-                Mes solutions d’IA sont conçues pour répondre aux défis uniques de chaque secteur. Que ce soit dans la santé, la finance, la logistique ou le commerce de détail, je propose une automatisation intelligente qui s’adapte à vos flux de travail et génère des résultats mesurables.
+                Mes solutions d’IA sont conçues pour répondre aux défis uniques de chaque secteur en Algérie. Que ce soit dans la santé, la finance, la logistique ou le commerce de détail, je propose une automatisation intelligente qui s’adapte à vos flux de travail et génère des résultats mesurables.
               </p>
               <div className="mt-6">
                 <img
@@ -57,7 +57,7 @@ const FrenchSecondSection = () => {
                 className="text-base md:text-lg leading-relaxed"
                 style={{ color: '#264653' }}
               >
-                Je développe des systèmes d’IA qui répondent aux défis urgents auxquels les industries sont confrontées aujourd’hui. Mes solutions sont pratiques, adaptables et conçues pour générer un impact immédiat.
+                Je développe des systèmes d’IA qui répondent aux défis urgents auxquels les industries sont confrontées aujourd’hui en Algérie. Mes solutions sont pratiques, adaptables et conçues pour générer un impact immédiat.
               </p>
               <div className="mt-6">
                 <img
@@ -87,7 +87,7 @@ const FrenchSecondSection = () => {
                 className="text-base md:text-lg leading-relaxed"
                 style={{ color: '#264653' }}
               >
-                Exploitez l’IA pour affiner votre avantage sur le marché. De l’optimisation des opérations à l’ouverture de nouvelles opportunités de croissance, mes solutions vous aident à aller plus vite, travailler plus intelligemment et rester en avance sur la concurrence.
+                Exploitez l’IA pour affiner votre avantage sur le marché algérien. De l’optimisation des opérations à l’ouverture de nouvelles opportunités de croissance, mes solutions vous aident à aller plus vite, travailler plus intelligement et rester en avance sur la concurrence.
               </p>
               <div className="mt-6">
                 <img

@@ -75,7 +75,7 @@ const FrenchFifthSection = () => {
                     color: '#FFFFFF'
                   }}
                 >
-                  ici avec Abderrahim
+                  ici en Algérie avec Abderrahim
                 </h2>
               </div>
               
@@ -114,7 +114,7 @@ const FrenchFifthSection = () => {
                       color: '#FFFFFF'
                     }}
                   >
-                    ici avec Abderrahim
+                    ici en Algérie avec Abderrahim
                   </h2>
                 </div>
                 

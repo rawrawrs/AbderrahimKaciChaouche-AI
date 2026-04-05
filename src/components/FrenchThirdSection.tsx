@@ -5,7 +5,7 @@ const solutionsDataFr = [
   {
     id: "AI Agents",
     title: "Agents d'IA",
-    description: "Abderrahim propose des agents d'IA qui se connectent parfaitement à vos applications, outils et bibliothèques — automatisant les tâches répétitives, optimisant les flux de travail et réduisant l’effort manuel. Mes agents sont conçus pour s’adapter à vos processus, aidant votre équipe à gagner du temps, réduire les coûts et se concentrer sur le travail qui génère réellement la croissance.",
+    description: "Abderrahim propose des agents d'IA en Algérie qui se connectent parfaitement à vos applications, outils et bibliothèques — automatisant les tâches répétitives, optimisant les flux de travail et réduisant l’effort manuel. Mes agents sont conçus pour s’adapter à vos processus, aidant votre équipe à gagner du temps, réduire les coûts et se concentrer sur le travail qui génère réellement la croissance.",
     cta: "Demander un agent d’IA",
     ctaHref: "/fr/contact"
   },
@@ -19,28 +19,28 @@ const solutionsDataFr = [
   {
     id: "Custom Deep Research",
     title: "Recherche approfondie sur mesure",
-    description: "Avec la recherche approfondie sur mesure, je développe des systèmes d'IA qui vont au-delà des réponses superficielles. En reliant vos données sectorielles, rapports et sources de connaissance, mon IA produit des analyses précises, traite des questions complexes et fournit des recherches entièrement adaptées aux besoins de votre organisation.",
+    description: "Avec la recherche approfondie sur mesure, je développe des systèmes d'IA en Algérie qui vont au-delà des réponses superficielles. En reliant vos données sectorielles, rapports et sources de connaissance, mon IA produit des analyses précises, traite des questions complexes et fournit des recherches entièrement adaptées aux besoins de votre organisation.",
     cta: "Lancer un projet de recherche",
     ctaHref: "/fr/contact"
   },
   {
     id: "File Processing",
     title: "Traitement de fichiers",
-    description: "Avec le traitement de fichiers propulsé l'IA, lisez, analysez et extrayez automatiquement des informations à partir de documents, feuilles de calcul, PDFs et plus encore. Transformez des fichiers non structurés en données organisées et exploitables.",
+    description: "Avec le traitement de fichiers propulsé par l'IA en Algérie, lisez, analysez et extrayez automatiquement des informations à partir de documents, feuilles de calcul, PDFs et plus encore. Transformez des fichiers non structurés en données organisées et exploitables.",
     cta: "Traiter vos fichiers",
     ctaHref: "/fr/contact"
   },
   {
     id: "AI Vision Solution",
     title: "Solutions de vision IA",
-    description: "Mes solutions de vision par IA permettent la détection, le comptage et l'analyse précis des objets dans les images et les vidéos. Du contrôle qualité à la surveillance des activités, je développe des systèmes de vision sur mesure, conçus pour répondre aux besoins spécifiques de votre secteur.",
+    description: "Mes solutions de vision par IA en Algérie permettent la détection, le comptage et l'analyse précis des objets dans les images et les vidéos. Du contrôle qualité à la surveillance des activités, je développe des systèmes de vision sur mesure, conçus pour répondre aux besoins spécifiques de votre secteur.",
     cta: "Explorer la vision par IA",
     ctaHref: "/fr/contact"
   },
   {
     id: "Custom Solutions",
     title: "Solutions sur mesure",
-    description: "Avec des solutions sur mesure, Abderrahim développe des systèmes d'IA adaptés à vos défis uniques. Que vous ayez besoin d'automatisation, d'analytique ou d'intelligence spécifique à votre secteur, je crée des solutions qui s'alignent sur vos objectifs, s'adaptent à vos flux de travail et résolvent de véritables problèmes.",
+    description: "Avec des solutions sur mesure en Algérie, Abderrahim développe des systèmes d'IA en Algérie adaptés à vos défis uniques. Que vous ayez besoin d'automatisation, d'analytique ou d'intelligence spécifique à votre secteur, je crée des solutions qui s'alignent sur vos objectifs, s'adaptent à vos flux de travail et résolvent de véritables problèmes.",
     cta: "Demander une solution sur mesure",
     ctaHref: "/fr/contact"
   }
@@ -138,7 +138,7 @@ const FrenchThirdSection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-normal font-inter"
             style={{ color: '#264653' }}
           >
-            Abderrahim Solutions d'IA pour Vous
+            Solutions d'IA Algérie pour Vous
           </h2>
         </div>
 

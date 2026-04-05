@@ -32,14 +32,14 @@ const FourthSection = () => {
                 className="text-xl md:text-2xl font-normal font-inter mt-4 text-left md:text-center"
                 style={{ color: '#264653' }}
               >
-                On cloud solutions
+                On cloud AI solutions
               </h3>
               {/* Description below left branch title */}
               <p
                 className="text-base md:text-lg leading-relaxed font-inter mt-4 text-left md:text-center max-w-xs"
                 style={{ color: '#264653' }}
               >
-                Our on-cloud solutions are built with security at the core. Data is secured, access is controlled, and compliance standards are met by design — ensuring your business benefits from the scalability of the cloud without compromising trust.
+                Our on-cloud AI solutions are built with security at the core. Data is secured, access is controlled, and compliance standards are met by design — ensuring your business benefits from the scalability of the cloud without compromising trust.
               </p>
             </div>
 
@@ -51,14 +51,14 @@ const FourthSection = () => {
                 className="text-xl md:text-2xl font-normal font-inter mt-4 text-left md:text-center"
                 style={{ color: '#264653' }}
               >
-                Local Host Solutions
+                Local Host AI Solutions
               </h3>
               {/* Description below right branch title */}
               <p
                 className="text-base md:text-lg leading-relaxed font-inter mt-4 text-left md:text-center max-w-xs"
                 style={{ color: '#264653' }}
               >
-                For organizations that require maximum control, our local host solutions keep your data on-site and under your management. With enterprise-grade security and full compliance, you gain the reliability of AI while ensuring sensitive information never leaves your environment.
+                For organizations that require maximum control, our local host AI solutions keep your data on-site and under your management. With enterprise-grade security and full compliance, you gain the reliability of AI while ensuring sensitive information never leaves your environment.
               </p>
             </div>
           </div>
